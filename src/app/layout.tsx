@@ -1,9 +1,13 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Exo_2, Lilita_One, Orbitron, Outfit } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
+import { SiteCopyProvider } from "@/components/content/SiteCopyProvider";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 import { studio } from "@/content/studio";
+import { readSiteCopy } from "@/lib/site-copy-store";
 import "./globals.css";
+
+export const dynamic = "force-dynamic";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -35,9 +39,6 @@ export const metadata: Metadata = {
     template: `%s · ${studio.name}`,
   },
   description: studio.description,
-  icons: {
-    icon: "/icon.svg",
-  },
   openGraph: {
     title: `${studio.name} · ${studio.tagline}`,
     description: studio.description,
@@ -55,24 +56,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const initialCopy = await readSiteCopy();
+
   return (
     <html
       lang="en"
       className={`${outfit.variable} ${orbitron.variable} ${exo.variable} ${lilita.variable} h-full antialiased`}
+      style={
+        {
+          "--heading": initialCopy.headingColor,
+          "--title": initialCopy.titleColor,
+        } as CSSProperties
+      }
     >
       <body className="min-h-full flex flex-col">
-        <a
-          href="#content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-lime focus:px-4 focus:py-2 focus:text-void"
-        >
-          Skip to content
-        </a>
-        <Header />
-        <main id="content" className="flex flex-1 flex-col">
-          {children}
-        </main>
-        <Footer />
+        <SiteCopyProvider initial={initialCopy}>
+          <SiteChrome>{children}</SiteChrome>
+        </SiteCopyProvider>
       </body>
     </html>
   );

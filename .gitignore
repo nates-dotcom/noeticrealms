@@ -40,4 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# runtime CMS overlay
+/data/site-content.json
+
 .vercel

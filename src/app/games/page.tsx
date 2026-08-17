@@ -7,7 +7,7 @@ import { games } from "@/content/games";
 export const metadata: Metadata = {
   title: "Games",
   description:
-    "VR games from Noetic Realms, led by the upcoming 1v1 duel Duel Me Bro VR.",
+    "VR games from Noetic Realms, led by the upcoming 1v1 and 2v2 duel Duel Me Bro VR.",
 };
 
 export default function GamesPage() {

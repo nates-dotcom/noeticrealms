@@ -40,7 +40,7 @@ export function SectionHeader({
       )}
     >
       {eyebrow ? <p className="eyebrow mb-4">{eyebrow}</p> : null}
-      <Heading className="font-chaos text-4xl text-ink sm:text-6xl">
+      <Heading className="font-chaos text-4xl sm:text-6xl" style={{ color: "var(--title)" }}>
         {highlighted}
       </Heading>
       {description ? (

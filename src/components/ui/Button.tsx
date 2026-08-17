@@ -2,12 +2,9 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 
 const variants = {
-  primary:
-    "bg-lime text-void shadow-[5px_5px_0_0_var(--magenta)] hover:-translate-y-0.5 hover:shadow-[7px_7px_0_0_var(--magenta)]",
-  secondary:
-    "border-2 border-ink/80 bg-transparent text-ink hover:border-lime hover:text-lime",
-  magenta:
-    "bg-magenta text-white shadow-[5px_5px_0_0_var(--lime)] hover:-translate-y-0.5 hover:shadow-[7px_7px_0_0_var(--lime)]",
+  primary: "btn",
+  secondary: "btn",
+  magenta: "btn",
   ghost: "bg-transparent text-ink hover:text-lime",
 };
 
@@ -39,11 +36,12 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-md font-display font-bold tracking-[0.14em] uppercase transition duration-200",
+    "inline-flex items-center justify-center gap-2 rounded-xl font-display font-bold tracking-[0.14em] uppercase transition duration-200 hover:-translate-y-0.5",
     variants[variant],
     sizes[size],
     className,
   );
+  const labelStyle = variant === "ghost" ? undefined : { color: "#fff" };
 
   if (href) {
     const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
@@ -53,6 +51,7 @@ export function Button({
         <a
           href={href}
           className={classes}
+          style={labelStyle}
           {...(href.startsWith("http")
             ? { target: "_blank", rel: "noreferrer" }
             : undefined)}
@@ -63,14 +62,14 @@ export function Button({
     }
 
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} style={labelStyle}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button type={type} className={classes} onClick={onClick}>
+    <button type={type} className={classes} style={labelStyle} onClick={onClick}>
       {children}
     </button>
   );

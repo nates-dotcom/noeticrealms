@@ -40,7 +40,7 @@ export function FeatureCard({
       {index ? (
         <p className="eyebrow mb-4 text-magenta">{index}</p>
       ) : null}
-      <h3 className="font-chaos text-3xl tracking-wide text-ink">{title}</h3>
+      <h3 className="font-chaos text-3xl tracking-wide" style={{ color: "var(--title)" }}>{title}</h3>
       <p className="mt-3 max-w-sm text-sm leading-7 text-muted">{body}</p>
     </Card>
   );

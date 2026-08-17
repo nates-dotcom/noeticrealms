@@ -15,6 +15,8 @@
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
   --radius: 18px;
   --header-h: 4.5rem;
+  --heading: #ffe14a;
+  --title: #fff6e8;
 }
 
 @theme inline {
@@ -75,6 +77,19 @@ a {
   color: inherit;
 }
 
+a.btn,
+button.btn {
+  background: var(--magenta);
+  color: #fff;
+  box-shadow: 6px 6px 0 0 var(--lime);
+}
+
+a.btn:hover,
+button.btn:hover {
+  color: #fff;
+  box-shadow: 8px 8px 0 0 var(--lime);
+}
+
 .font-display {
   font-family: var(--font-orbitron), sans-serif;
 }
@@ -93,7 +108,7 @@ a {
   letter-spacing: 0.01em;
   line-height: 0.86;
   text-transform: uppercase;
-  color: #ffe14a;
+  color: var(--heading, #ffe14a);
   -webkit-text-stroke: 0.06em #111;
   paint-order: stroke fill;
   text-shadow:
@@ -216,6 +231,22 @@ a {
   to {
     transform: translateX(-50%);
   }
+}
+
+.admin-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background: var(--void-2);
+  padding: 0.75rem 0.9rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.admin-input:focus {
+  outline: 2px solid color-mix(in srgb, var(--lime) 70%, transparent);
+  outline-offset: 1px;
 }
 
 @media (prefers-reduced-motion: reduce) {

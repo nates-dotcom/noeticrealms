@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 
 type LogoProps = {
@@ -23,20 +24,13 @@ export function Logo({ className, markClassName, showWordmark = true }: LogoProp
 
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 64 64"
+    <Image
+      src="/brand/noetic-realms-icon.png"
+      alt=""
+      width={88}
+      height={88}
+      className={cn("h-9 w-9 shrink-0 object-contain", className)}
       aria-hidden="true"
-      className={cn("h-9 w-9 shrink-0", className)}
-    >
-      <path
-        d="M8 32c9.5-16 38.5-16 48 0-9.5 16-38.5 16-48 0Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="3.2"
-      />
-      <path d="M32 8 38.5 32 32 56 25.5 32Z" fill="#ffe14a" />
-      <circle cx="32" cy="32" r="7.5" fill="#0c0706" />
-      <circle cx="32" cy="32" r="3.4" fill="#ff3a14" />
-    </svg>
+    />
   );
 }

@@ -1,12 +1,12 @@
 const items = [
   "1v1",
+  "2v2",
   "Bananas",
+  "Choose your weapon",
   "Pistols",
   "Katanas",
-  "Red vs blue",
   "Talk trash",
   "Meta Quest",
-  "PCVR",
 ];
 
 export function Ticker() {

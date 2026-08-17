@@ -35,9 +35,9 @@ export const games: Game[] = [
     slug: "duel-me-bro",
     title: "Duel Me Bro VR",
     shortName: "Duel Me Bro",
-    tagline: "Pistols. Katanas. Bananas.",
+    tagline: "Choose your weapon. Bring the bananas.",
     status: "upcoming",
-    platforms: ["Meta Quest", "PCVR"],
+    platforms: ["Meta Quest"],
     cover: "/media/games/duel-me-bro/poster.png",
     hero: "/media/games/duel-me-bro/banner-wide.png",
     gallery: [
@@ -54,7 +54,7 @@ export const games: Game[] = [
       {
         src: "/media/games/duel-me-bro/key-art-duel.png",
         alt: "Banana in a VR headset firing flintlocks at a banana with katanas",
-        caption: "Pistols vs blades",
+        caption: "Lock in a weapon",
       },
       {
         src: "/media/games/duel-me-bro/key-art-clash.png",
@@ -68,41 +68,41 @@ export const games: Game[] = [
       },
     ],
     summary:
-      "A chaotic 1v1 VR showdown where cartoon bananas settle beef with flintlocks, katanas, and your actual arms.",
+      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms.",
     description: [
-      "Duel Me Bro VR is the call-out made into a game. You and a rival step into banana bodies, pick a side, and settle it in a short, loud VR duel. One of you has the pistols. One of you has the blades. Both of you are going to talk trash.",
-      "It is competitive without being sterile and cartoon without being cute. Red versus blue. Headset versus shades. High scores and settings stay on your device. The bragging rights travel wherever you take them.",
+      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash.",
+      "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them.",
     ],
     features: [
       {
-        title: "1v1 energy",
-        body: "Short, explosive duels made for challenge matches, rematches, and instant regret.",
+        title: "1v1 and 2v2",
+        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches and instant regret.",
       },
       {
-        title: "Pistols vs blades",
-        body: "Flintlocks on one side, katanas on the other. Close-range VR combat with a ridiculous amount of personality.",
+        title: "Choose your weapon",
+        body: "Lock in pistols, katanas, or whatever you bring into the round. The match is about what you pick, not a locked side.",
       },
       {
         title: "Banana mayhem",
         body: "Cel-shaded fighters, comic speed lines, and the kind of clip that gets sent to the group chat at 1am.",
       },
       {
-        title: "Local glory",
-        body: "High scores and settings live on your headset. No accounts. No trackers. Uninstall and it is gone.",
+        title: "Crowd chaos",
+        body: "Minigames with friends, high score boards, bets on who wins the next duel, and tomatoes for your favorites. Or your enemies. Same throw either way.",
       },
     ],
     modes: [
       {
-        title: "Duel",
+        title: "1v1",
         body: "One rival. One arena. Draw and don't miss.",
+      },
+      {
+        title: "2v2",
+        body: "Bring a partner. Double the bananas, double the trash talk.",
       },
       {
         title: "Rematch",
         body: "Because one round is never enough once somebody starts talking.",
-      },
-      {
-        title: "High score hunt",
-        body: "Chase local records and keep the bragging rights in the headset.",
       },
     ],
     accent: "lime",
