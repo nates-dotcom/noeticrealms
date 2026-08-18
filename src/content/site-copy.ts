@@ -173,9 +173,8 @@ export const defaultSiteCopy: SiteCopy = {
       "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Full of personality. Built for players who want to move, talk trash, and remember the round. The studio makes games for Meta Quest 3, starting with the upcoming 1v1 and 2v2 VR duel Duel Me Bro VR.",
     howEyebrow: "How we build",
     howItems: [
-      "VR-native movement and combat, not a flat game with a headset slapped on.",
-      "Characters and arenas with enough personality to survive a clip compilation.",
-      "Player-respecting software: local saves, no ads, no silent data harvest.",
+      "VR-native movement and combat built around the fun of physically moving, aiming, reloading, and interacting—not a flat game with a headset slapped on.",
+      "Realistic interactions and reloading that make every weapon feel satisfying and every encounter more physical and immersive.",
     ],
     stats: [
       { label: "Focus", value: "VR games" },
