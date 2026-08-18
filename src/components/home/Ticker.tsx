@@ -6,6 +6,9 @@ const items = [
   "Pistols",
   "Katanas",
   "Talk trash",
+  "Don't slip",
+  "Bruise 'em",
+  "A-peel-ing",
   "Meta Quest",
 ];
 

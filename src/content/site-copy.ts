@@ -102,57 +102,57 @@ export const defaultSiteCopy: SiteCopy = {
     vrMark: "VR",
     statusLabel: "Upcoming",
     platforms: "Meta Quest",
-    tagline: "Choose your weapon. Bring the bananas.",
+    tagline: "Choose your weapon. Bruise your opponent.",
     summary:
-      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms.",
+      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms. Slip once and the whole bunch is talking.",
     description: [
-      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash.",
-      "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them.",
+      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
+      "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them, and the look is extremely a-peel-ing.",
     ],
-    pitchEyebrow: "The pitch",
+    pitchEyebrow: "The peel",
     features: [
       {
         title: "1v1 and 2v2",
-        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches and instant regret.",
+        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches, instant regret, and a well-timed slip.",
       },
       {
         title: "Choose your weapon",
-        body: "Lock in pistols, katanas, or whatever you bring into the round. The match is about what you pick, not a locked side.",
+        body: "Lock in pistols, katanas, or whatever you peel into the round. The match is about what you pick, not a locked side.",
       },
       {
         title: "Banana mayhem",
-        body: "Cel-shaded fighters, comic speed lines, and the kind of clip that gets sent to the group chat at 1am.",
+        body: "Cel-shaded fighters, comic speed lines, and an a-peel-ing look built for clips that get sent to the group chat at 1am.",
       },
       {
         title: "Crowd chaos",
-        body: "Minigames with friends, high score boards, bets on who wins the next duel, and tomatoes for your favorites. Or your enemies. Same throw either way.",
+        body: "Minigames with friends, high score boards, bets on who bruises who, and tomatoes for your favorites. Or your enemies. Same throw either way.",
       },
     ],
     modesEyebrow: "Features",
-    modesTitle: "1v1. 2v2. Instant rematches.",
+    modesTitle: "1v1. 2v2. Instant bruises.",
     modesHighlight: "2v2",
     modes: [
       {
         title: "1v1",
-        body: "One rival. One arena. Draw and don't miss.",
+        body: "One rival. One arena. Draw, don't slip, and bruise your opponent.",
       },
       {
         title: "2v2",
-        body: "Bring a partner. Double the bananas, double the trash talk.",
+        body: "Bring a partner. Double the bananas, double the trash talk. Split the squad and go.",
       },
       {
         title: "Rematch",
-        body: "Because one round is never enough once somebody starts talking.",
+        body: "Because one round is never enough once somebody starts talking. Peel off another.",
       },
     ],
   },
   studio: {
     name: "Noetic Realms",
-    tagline: "Indie VR with a pulse.",
+    tagline: "Indie VR with a peel.",
     description:
-      "Noetic Realms is an independent game studio building next-generation VR experiences for Meta Quest.",
+      "Noetic Realms is an independent game studio building next-generation VR with an a-peel-ing amount of personality, starting on Meta Quest.",
     about:
-      "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Full of personality. Built for players who want to move, talk trash, and remember the round.",
+      "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Built for players who want to move, talk trash, slip, and remember the round.",
     platformsLine: "Meta Quest 3",
     email: "duelmebro@noeticrealms.com",
     discordUrl: "https://discord.gg/k3Qc4CarhU",
@@ -160,21 +160,21 @@ export const defaultSiteCopy: SiteCopy = {
     youtubeUrl: "https://www.youtube.com/@DuelMeBroVR",
     instagramUrl: "https://www.instagram.com/duelmebrovr/",
     tiktokUrl: "https://www.tiktok.com/@duelmebrovr",
-    footerLine: "VR · Chaos · Multiplayer",
+    footerLine: "VR · Chaos · Don't slip",
   },
   about: {
     eyebrow: "Studio",
-    title: "Independent VR. Loud on purpose.",
-    highlight: "Loud",
+    title: "Independent VR. Ripe on purpose.",
+    highlight: "Ripe",
     description:
-      "Noetic Realms is an independent game studio building next-generation VR experiences for Meta Quest.",
+      "Noetic Realms is an independent game studio building next-generation VR with an a-peel-ing amount of personality, starting on Meta Quest.",
     whoEyebrow: "Who we are",
     whoBody:
-      "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Full of personality. Built for players who want to move, talk trash, and remember the round. The studio makes games for Meta Quest 3, starting with the upcoming 1v1 and 2v2 VR duel Duel Me Bro VR.",
+      "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Built for players who want to move, talk trash, slip, and remember the round. The studio makes games for Meta Quest 3, starting with the upcoming 1v1 and 2v2 VR duel Duel Me Bro VR.",
     howEyebrow: "How we build",
     howItems: [
       "VR-native movement and combat built around the fun of physically moving, aiming, reloading, and interacting—not a flat game with a headset slapped on.",
-      "Realistic interactions and reloading that make every weapon feel satisfying and every encounter more physical and immersive.",
+      "Realistic interactions and reloading that make every weapon feel satisfying and every encounter more physical and immersive. Bruise your opponent. Don't slip.",
     ],
     stats: [
       { label: "Focus", value: "VR games" },
@@ -184,13 +184,14 @@ export const defaultSiteCopy: SiteCopy = {
     ctaLabel: "See Duel Me Bro VR",
   },
   contact: {
-    eyebrow: "Ping us",
+    eyebrow: "Ping the bunch",
     title: "Contact",
     description:
       "Discord is the fastest way to catch development updates. Email is for support, press, and anything that needs a paper trail.",
     discordEyebrow: "Community",
     discordTitle: "Discord",
-    discordBody: "Playtests, patches, and the usual headset-on yelling. Come hang out.",
+    discordBody:
+      "Playtests, patches, and the usual headset-on yelling. Come hang with the bunch. Try not to slip on the way in.",
     emailEyebrow: "Direct",
     emailTitle: "Email",
     emailBody:

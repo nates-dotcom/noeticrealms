@@ -35,7 +35,7 @@ export const games: Game[] = [
     slug: "duel-me-bro",
     title: "Duel Me Bro VR",
     shortName: "Duel Me Bro",
-    tagline: "Choose your weapon. Bring the bananas.",
+    tagline: "Choose your weapon. Bruise your opponent.",
     status: "upcoming",
     platforms: ["Meta Quest"],
     cover: "/media/games/duel-me-bro/poster.png",
@@ -68,41 +68,41 @@ export const games: Game[] = [
       },
     ],
     summary:
-      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms.",
+      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms. Slip once and the whole bunch is talking.",
     description: [
-      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash.",
-      "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them.",
+      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
+      "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them, and the look is extremely a-peel-ing.",
     ],
     features: [
       {
         title: "1v1 and 2v2",
-        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches and instant regret.",
+        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches, instant regret, and a well-timed slip.",
       },
       {
         title: "Choose your weapon",
-        body: "Lock in pistols, katanas, or whatever you bring into the round. The match is about what you pick, not a locked side.",
+        body: "Lock in pistols, katanas, or whatever you peel into the round. The match is about what you pick, not a locked side.",
       },
       {
         title: "Banana mayhem",
-        body: "Cel-shaded fighters, comic speed lines, and the kind of clip that gets sent to the group chat at 1am.",
+        body: "Cel-shaded fighters, comic speed lines, and an a-peel-ing look built for clips that get sent to the group chat at 1am.",
       },
       {
         title: "Crowd chaos",
-        body: "Minigames with friends, high score boards, bets on who wins the next duel, and tomatoes for your favorites. Or your enemies. Same throw either way.",
+        body: "Minigames with friends, high score boards, bets on who bruises who, and tomatoes for your favorites. Or your enemies. Same throw either way.",
       },
     ],
     modes: [
       {
         title: "1v1",
-        body: "One rival. One arena. Draw and don't miss.",
+        body: "One rival. One arena. Draw, don't slip, and bruise your opponent.",
       },
       {
         title: "2v2",
-        body: "Bring a partner. Double the bananas, double the trash talk.",
+        body: "Bring a partner. Double the bananas, double the trash talk. Split the squad and go.",
       },
       {
         title: "Rematch",
-        body: "Because one round is never enough once somebody starts talking.",
+        body: "Because one round is never enough once somebody starts talking. Peel off another.",
       },
     ],
     accent: "lime",
