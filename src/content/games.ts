@@ -80,11 +80,11 @@ export const games: Game[] = [
       },
       {
         title: "Choose your weapon",
-        body: "Lock in pistols, katanas, or whatever you peel into the round. The match is about what you pick, not a locked side.",
+        body: "Bring pistols, katanas, or whatever you find a-peel-ling. You pick the fight, you pick the weapon.",
       },
       {
-        title: "Banana mayhem",
-        body: "Cel-shaded fighters, comic speed lines, and an a-peel-ing look built for clips that get sent to the group chat at 1am.",
+        title: "Go Bananas",
+        body: "Awesome weapons and fun fighters built for the kind of VR moments you have to send to the group chat. Every duel is a chance to go bananas, get weird, and pull off something worth clipping.",
       },
       {
         title: "Crowd chaos",
