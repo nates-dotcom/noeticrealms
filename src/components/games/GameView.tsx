@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -36,6 +37,7 @@ export function GameView({
             <div className="flex flex-wrap gap-3">
               <Badge>{game.statusLabel}</Badge>
               <Badge tone="cyan">{game.platforms}</Badge>
+              <Badge tone="magenta">{game.genres}</Badge>
             </div>
             <h1
               aria-label={game.title}
@@ -49,6 +51,11 @@ export function GameView({
             <p className="lede mt-8 max-w-xl text-lg leading-8 text-muted">
               {game.summary}
             </p>
+            <div className="mt-8">
+              <Button href={copy.studio.wishlistUrl} external>
+                {copy.studio.wishlistLabel}
+              </Button>
+            </div>
           </div>
           <div className="frame glow-lime relative mx-auto aspect-[716/1024] w-full max-w-md overflow-hidden rounded-[1.5rem] lg:max-w-none">
             <Image

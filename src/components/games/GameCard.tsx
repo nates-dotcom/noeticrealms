@@ -51,7 +51,7 @@ export function IncomingGameCard() {
           More games incoming
         </h3>
         <p className="mt-3 max-w-sm text-sm leading-7 text-muted">
-          Duel Me Bro VR is first through the door. Additional titles drop into this
+          Duel Me Bro is first through the door. Additional titles drop into this
           grid as they are ready to show.
         </p>
       </div>

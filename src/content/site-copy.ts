@@ -29,6 +29,7 @@ export type SiteCopy = {
     vrMark: string;
     statusLabel: string;
     platforms: string;
+    genres: string;
     tagline: string;
     summary: string;
     description: string[];
@@ -46,6 +47,8 @@ export type SiteCopy = {
     about: string;
     platformsLine: string;
     email: string;
+    wishlistUrl: string;
+    wishlistLabel: string;
     discordUrl: string;
     discordLabel: string;
     youtubeUrl: string;
@@ -90,30 +93,31 @@ export const defaultSiteCopy: SiteCopy = {
   headingColor: "#ffe14a",
   titleColor: "#fff6e8",
   nav: {
-    duelMeBro: "Duel Me Bro VR",
+    duelMeBro: "Duel Me Bro",
     about: "About",
     contact: "Contact",
     privacy: "Privacy",
   },
   game: {
-    title: "Duel Me Bro VR",
+    title: "Duel Me Bro",
     wordmarkLine1: "Duel Me",
     wordmarkLine2: "Bro",
     vrMark: "VR",
-    statusLabel: "Upcoming",
+    statusLabel: "Coming soon",
     platforms: "Meta Quest",
+    genres: "Shooter · Fighting · Action · Party",
     tagline: "Choose your weapon. Bruise your opponent.",
     summary:
-      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms. Slip once and the whole bunch is talking.",
+      "A chaotic shooter, fighter, and party game for Meta Quest. Cartoon bananas pick a weapon, step in, and settle beef with their actual arms. 1v1 or 2v2. Slip once and the whole bunch is talking.",
     description: [
-      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
+      "Duel Me Bro is coming soon to Meta Quest: a party shooter-fighter where you step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
       "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them, and the look is extremely a-peel-ing.",
     ],
-    pitchEyebrow: "The peel",
+    pitchEyebrow: "About",
     features: [
       {
-        title: "1v1 and 2v2",
-        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches, instant regret, and a well-timed slip.",
+        title: "Party fights",
+        body: "Shooter energy, fighting stakes, party-game chaos. Short 1v1 and 2v2 rounds made for rematches, instant regret, and a well-timed slip.",
       },
       {
         title: "Choose your weapon",
@@ -128,7 +132,7 @@ export const defaultSiteCopy: SiteCopy = {
         body: "Minigames with friends, high score boards, bets on who bruises who, and tomatoes for your favorites. Or your enemies. Same throw either way.",
       },
     ],
-    modesEyebrow: "Features",
+    modesEyebrow: "Play",
     modesTitle: "1v1. 2v2. Instant bruises.",
     modesHighlight: "2v2",
     modes: [
@@ -150,44 +154,46 @@ export const defaultSiteCopy: SiteCopy = {
     name: "Noetic Realms",
     tagline: "Indie VR with a peel.",
     description:
-      "Noetic Realms is an independent game studio building next-generation VR with an a-peel-ing amount of personality, starting on Meta Quest.",
+      "Noetic Realms is an independent studio building a-peel-ing VR for Meta Quest, starting with Duel Me Bro — a coming-soon shooter, fighter, and party game.",
     about:
       "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Built for players who want to move, talk trash, slip, and remember the round.",
-    platformsLine: "Meta Quest 3",
+    platformsLine: "Meta Quest",
     email: "duelmebro@noeticrealms.com",
+    wishlistUrl: "https://www.meta.com/experiences/duel-me-bro/26067289019616501/",
+    wishlistLabel: "Wishlist Now",
     discordUrl: "https://discord.gg/k3Qc4CarhU",
     discordLabel: "Discord",
     youtubeUrl: "https://www.youtube.com/@DuelMeBroVR",
     instagramUrl: "https://www.instagram.com/duelmebrovr/",
     tiktokUrl: "https://www.tiktok.com/@duelmebrovr",
-    footerLine: "VR · Chaos · Don't slip",
+    footerLine: "Coming soon · Don't slip",
   },
   about: {
     eyebrow: "Studio",
     title: "Independent VR. Ripe on purpose.",
     highlight: "Ripe",
     description:
-      "Noetic Realms is an independent game studio building next-generation VR with an a-peel-ing amount of personality, starting on Meta Quest.",
+      "Noetic Realms is an independent studio building a-peel-ing VR for Meta Quest, starting with Duel Me Bro — a coming-soon shooter, fighter, and party game.",
     whoEyebrow: "Who we are",
     whoBody:
-      "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Built for players who want to move, talk trash, slip, and remember the round. The studio makes games for Meta Quest 3, starting with the upcoming 1v1 and 2v2 VR duel Duel Me Bro VR.",
+      "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Built for players who want to move, talk trash, slip, and remember the round. First through the door is Duel Me Bro on Meta Quest: choose your weapon, bruise your opponent, try not to slip.",
     howEyebrow: "How we build",
     howItems: [
       "VR-native movement and combat built around the fun of physically moving, aiming, reloading, and interacting—not a flat game with a headset slapped on.",
       "Realistic interactions and reloading that make every weapon feel satisfying and every encounter more physical and immersive. Bruise your opponent. Don't slip.",
     ],
     stats: [
-      { label: "Focus", value: "VR games" },
+      { label: "Focus", value: "Party VR" },
       { label: "Platforms", value: "Meta Quest" },
-      { label: "Lead title", value: "Duel Me Bro VR" },
+      { label: "Lead title", value: "Duel Me Bro" },
     ],
-    ctaLabel: "See Duel Me Bro VR",
+    ctaLabel: "Wishlist Now",
   },
   contact: {
     eyebrow: "Ping the bunch",
     title: "Contact",
     description:
-      "Discord is the fastest way to catch development updates. Email is for support, press, and anything that needs a paper trail.",
+      "Wishlist Duel Me Bro on the Meta Store, then hop in Discord for development updates. Email is for support, press, and anything that needs a paper trail.",
     discordEyebrow: "Community",
     discordTitle: "Discord",
     discordBody:
@@ -201,13 +207,19 @@ export const defaultSiteCopy: SiteCopy = {
   privacy: {
     eyebrow: "Legal",
     title: "Privacy Policy",
-    description: "This policy covers Duel Me Bro VR and the Noetic Realms studio website.",
+    description: "This policy covers Duel Me Bro and the Noetic Realms studio website.",
     updated: "Last updated August 2026.",
     sections: [
       {
         title: "We do not collect your data",
         body: [
-          "Neither Duel Me Bro VR nor Noetic Realms collect, transmit, distribute, or sell your data. The game uses no third-party analytics or advertising services. No email, name, address, or any other personal information is requested or required to play.",
+          "Neither Duel Me Bro nor Noetic Realms collect, transmit, distribute, or sell your data. The game uses no third-party analytics or advertising services. No email, name, address, or any other personal information is requested or required to play.",
+        ],
+      },
+      {
+        title: "Meta Quest platform",
+        body: [
+          "Duel Me Bro is listed on the Meta Store as coming soon, with Users Interact and in-game purchases. When you play on Meta Quest, Meta may access platform account details shown on the store page, including your display name, username, user id, profile pictures, avatars, age group, and a list of followers and people you follow who also own the app. That is Meta platform identity for multiplayer, not data Noetic Realms collects, sells, or uses for ads.",
         ],
       },
       {

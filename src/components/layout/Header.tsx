@@ -49,8 +49,11 @@ export function Header() {
         </nav>
 
         <div className="relative z-20 flex items-center gap-2">
-          <SocialLinks />
-          <div className="hidden lg:block">
+          <SocialLinks className="lg:hidden xl:flex" />
+          <div className="hidden items-center gap-3 lg:flex">
+            <Button href={copy.studio.wishlistUrl} external size="sm">
+              {copy.studio.wishlistLabel}
+            </Button>
             <Button href={copy.studio.discordUrl} external size="sm">
               {copy.studio.discordLabel}
             </Button>
@@ -102,6 +105,9 @@ export function Header() {
             </Link>
           ))}
           <SocialLinks />
+          <Button href={copy.studio.wishlistUrl} external>
+            {copy.studio.wishlistLabel}
+          </Button>
           <Button href={copy.studio.discordUrl} external>
             Join {copy.studio.discordLabel}
           </Button>

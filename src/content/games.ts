@@ -33,7 +33,7 @@ export type Game = {
 export const games: Game[] = [
   {
     slug: "duel-me-bro",
-    title: "Duel Me Bro VR",
+    title: "Duel Me Bro",
     shortName: "Duel Me Bro",
     tagline: "Choose your weapon. Bruise your opponent.",
     status: "upcoming",
@@ -68,15 +68,15 @@ export const games: Game[] = [
       },
     ],
     summary:
-      "A chaotic 1v1 and 2v2 VR showdown where cartoon bananas pick a weapon, step in, and settle beef with their actual arms. Slip once and the whole bunch is talking.",
+      "A chaotic shooter, fighter, and party game for Meta Quest. Cartoon bananas pick a weapon, step in, and settle beef with their actual arms. 1v1 or 2v2. Slip once and the whole bunch is talking.",
     description: [
-      "Duel Me Bro VR is the call-out made into a game. Step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
+      "Duel Me Bro is coming soon to Meta Quest: a party shooter-fighter where you step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
       "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them, and the look is extremely a-peel-ing.",
     ],
     features: [
       {
-        title: "1v1 and 2v2",
-        body: "Solo call-outs or partner chaos. Short, explosive rounds made for rematches, instant regret, and a well-timed slip.",
+        title: "Party fights",
+        body: "Shooter energy, fighting stakes, party-game chaos. Short 1v1 and 2v2 rounds made for rematches, instant regret, and a well-timed slip.",
       },
       {
         title: "Choose your weapon",
@@ -106,6 +106,7 @@ export const games: Game[] = [
       },
     ],
     accent: "lime",
+    storeUrl: "https://www.meta.com/experiences/duel-me-bro/26067289019616501/",
   },
 ];
 
@@ -118,7 +119,7 @@ export function getFeaturedGame() {
 }
 
 export const statusCopy: Record<GameStatus, string> = {
-  upcoming: "Upcoming",
+  upcoming: "Coming soon",
   "early-access": "Early Access",
   released: "Available Now",
 };

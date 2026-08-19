@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: "/media/games/duel-me-bro/poster.png",
         width: 1920,
         height: 1080,
-        alt: "Duel Me Bro VR",
+        alt: "Duel Me Bro",
       },
     ],
   },

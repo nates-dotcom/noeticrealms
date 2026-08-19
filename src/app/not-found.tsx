@@ -7,7 +7,7 @@ export default function NotFound() {
       <p className="eyebrow">404</p>
       <h1 className="wordmark mt-4 text-7xl sm:text-8xl">You slipped</h1>
       <p className="mt-5 max-w-md text-muted">
-        That page does not exist. Peel back to the arena.
+        That page does not exist. Peel back to the arena and wishlist Duel Me Bro.
       </p>
       <div className="mt-8">
         <Button href="/">Back home</Button>

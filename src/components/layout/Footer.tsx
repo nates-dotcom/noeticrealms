@@ -43,6 +43,16 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm">
             <li>
               <a
+                href={copy.studio.wishlistUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted transition hover:text-lime"
+              >
+                {copy.studio.wishlistLabel}
+              </a>
+            </li>
+            <li>
+              <a
                 href={copy.studio.discordUrl}
                 target="_blank"
                 rel="noreferrer"

@@ -48,7 +48,9 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-12 flex flex-wrap gap-4">
-        <Button href="/games/duel-me-bro">{copy.about.ctaLabel}</Button>
+        <Button href={copy.studio.wishlistUrl} external>
+          {copy.about.ctaLabel}
+        </Button>
         <Button href={copy.studio.discordUrl} external variant="secondary">
           Join {copy.studio.discordLabel}
         </Button>
