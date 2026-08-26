@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { statusCopy, type Game } from "@/content/games";
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 
 export function GameCard({ game, featured = false }: { game: Game; featured?: boolean }) {
   return (
@@ -11,8 +12,8 @@ export function GameCard({ game, featured = false }: { game: Game; featured?: bo
       <Card
         padded={false}
         className={cn(
-          "h-full transition duration-200 hover:-translate-y-1 hover:border-lime/50",
-          featured && "glow-lime",
+          "h-full transition duration-200 hover:border-lime/50",
+          featured && "border-lime/35",
         )}
       >
         <div className="relative aspect-[716/1024] overflow-hidden">
@@ -21,19 +22,19 @@ export function GameCard({ game, featured = false }: { game: Game; featured?: bo
             alt={`${game.title} cover art`}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover object-top transition duration-500 group-hover:scale-105"
+            className="object-cover object-top"
           />
           <div className="absolute left-4 top-4">
             <Badge>{statusCopy[game.status]}</Badge>
           </div>
         </div>
         <div className="p-6">
-          <p className="eyebrow text-magenta">Featured title</p>
-          <h3 className="mt-3 font-chaos text-3xl tracking-wide sm:text-4xl">
+          <p className={`${typography.eyebrow} text-magenta`}>Featured title</p>
+          <h3 className={`mt-3 ${typography.h2}`}>
             {game.shortName}
           </h3>
-          <p className="mt-2 text-sm leading-7 text-muted">{game.tagline}</p>
-          <p className="mt-4 font-display text-[0.65rem] tracking-[0.18em] uppercase text-cyan">
+          <p className={`${typography.small} mt-2 text-muted`}>{game.tagline}</p>
+          <p className={`${typography.eyebrow} mt-4 text-cyan`}>
             {game.platforms.join(" · ")}
           </p>
         </div>
@@ -47,15 +48,15 @@ export function IncomingGameCard() {
     <Card className="flex h-full min-h-[22rem] flex-col justify-between border-dashed bg-transparent">
       <div>
         <Badge tone="muted">Next realm</Badge>
-        <h3 className="mt-5 font-chaos text-3xl tracking-wide text-muted">
+        <h3 className={`mt-5 ${typography.h2} text-muted`}>
           More games incoming
         </h3>
-        <p className="mt-3 max-w-sm text-sm leading-7 text-muted">
+        <p className={`${typography.small} mt-3 max-w-sm text-muted`}>
           Duel Me Bro is first through the door. Additional titles drop into this
           grid as they are ready to show.
         </p>
       </div>
-      <p className="font-display text-[0.65rem] tracking-[0.2em] uppercase text-lime">
+      <p className={`${typography.eyebrow} text-lime`}>
         Coming later
       </p>
     </Card>

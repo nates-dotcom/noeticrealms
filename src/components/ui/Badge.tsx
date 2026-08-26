@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 
 type BadgeProps = {
   children: React.ReactNode;
@@ -17,7 +18,8 @@ export function Badge({ children, tone = "lime", className }: BadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border px-3 py-1 font-display text-[0.65rem] font-bold tracking-[0.18em] uppercase",
+        "inline-flex items-center rounded-full border px-3 py-1",
+        typography.eyebrow,
         tones[tone],
         className,
       )}

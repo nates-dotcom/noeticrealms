@@ -3,6 +3,7 @@
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { typography } from "@/lib/type";
 
 export default function PrivacyPage() {
   const { copy } = useSiteCopy();
@@ -18,15 +19,15 @@ export default function PrivacyPage() {
       <div className="mt-12 space-y-10">
         {copy.privacy.sections.map((section) => (
           <section key={section.title}>
-            <h2 className="font-chaos text-3xl tracking-wide" style={{ color: "var(--title)" }}>{section.title}</h2>
+            <h2 className={typography.h2} style={{ color: "var(--title)" }}>{section.title}</h2>
             {section.body.map((paragraph) => (
-              <p key={paragraph} className="mt-3 text-sm leading-8 text-muted sm:text-base">
+              <p key={paragraph} className={`${typography.body} mt-3 text-muted`}>
                 {paragraph}
               </p>
             ))}
           </section>
         ))}
-        <p className="text-xs text-muted">{copy.privacy.updated}</p>
+        <p className={`${typography.small} text-muted`}>{copy.privacy.updated}</p>
       </div>
     </Container>
   );

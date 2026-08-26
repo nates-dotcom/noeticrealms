@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { defaultSiteCopy, type CopyFeature, type SiteCopy } from "@/content/site-copy";
+import { typography } from "@/lib/type";
 
 type Status = { tone: "ok" | "error"; message: string } | null;
 
@@ -63,8 +64,8 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
   return (
     <form onSubmit={submit} className="mx-auto w-full max-w-md rounded-[var(--radius)] border border-line bg-panel p-6 sm:p-8">
       <p className="eyebrow">Hidden admin</p>
-      <h1 className="mt-3 font-chaos text-4xl tracking-wide">Sign in</h1>
-      <p className="mt-3 text-sm leading-7 text-muted">
+      <h1 className={`mt-3 ${typography.h1}`}>Sign in</h1>
+      <p className={`${typography.small} mt-3 text-muted`}>
         Edit site copy, heading color, and info. This page is not linked anywhere on the public site.
       </p>
       <label className="mt-8 block">
@@ -165,8 +166,8 @@ function AdminEditor({ onLogout }: { onLogout: () => void }) {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="eyebrow">Noetic Realms</p>
-          <h1 className="mt-3 font-chaos text-5xl tracking-wide">Site admin</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-muted">
+          <h1 className={`mt-3 ${typography.h1}`}>Site admin</h1>
+          <p className={`${typography.small} mt-3 max-w-2xl text-muted`}>
             Change verbiage, heading colors, and studio info. This URL is hidden from nav, footer, and search.
           </p>
         </div>
@@ -417,7 +418,7 @@ function AdminEditor({ onLogout }: { onLogout: () => void }) {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-10 rounded-[var(--radius)] border border-line bg-panel p-5 sm:p-7">
-      <h2 className="font-chaos text-3xl tracking-wide">{title}</h2>
+      <h2 className={typography.h2}>{title}</h2>
       <div className="mt-6 space-y-5">{children}</div>
     </section>
   );

@@ -13,14 +13,21 @@ const items = [
   "Meta Quest",
 ];
 
-export function Ticker() {
+export function Ticker({
+  orientation = "horizontal",
+}: {
+  orientation?: "horizontal" | "vertical";
+}) {
   const loop = [...items, ...items];
 
   return (
-    <div className="ticker" aria-hidden="true">
+    <div
+      className={orientation === "vertical" ? "ticker ticker-vertical" : "ticker"}
+      aria-hidden="true"
+    >
       <div className="ticker-track">
         {loop.map((item, index) => (
-          <span key={`${item}-${index}`} className="ticker-item">
+          <span key={`${orientation}-${item}-${index}`} className="ticker-item">
             <span className="ticker-dot" />
             {item}
           </span>

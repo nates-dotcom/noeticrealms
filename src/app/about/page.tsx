@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { typography } from "@/lib/type";
 
 export default function AboutPage() {
   const { copy } = useSiteCopy();
@@ -22,13 +23,13 @@ export default function AboutPage() {
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         <Card>
           <p className="eyebrow">{copy.about.whoEyebrow}</p>
-          <p className="mt-4 text-sm leading-8 text-muted sm:text-base">
+          <p className={`${typography.body} mt-4 text-muted`}>
             {copy.about.whoBody}
           </p>
         </Card>
         <Card className="bg-panel-2">
           <p className="eyebrow">{copy.about.howEyebrow}</p>
-          <ul className="mt-4 space-y-4 text-sm leading-7 text-muted sm:text-base">
+          <ul className={`${typography.body} mt-4 space-y-4 text-muted`}>
             {copy.about.howItems.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -40,7 +41,7 @@ export default function AboutPage() {
         {copy.about.stats.map((item) => (
           <Card key={item.label}>
             <p className="eyebrow">{item.label}</p>
-            <p className="mt-3 font-chaos text-3xl tracking-wide" style={{ color: "var(--title)" }}>
+            <p className={`mt-3 ${typography.h3}`} style={{ color: "var(--title)" }}>
               {item.value}
             </p>
           </Card>

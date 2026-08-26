@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 import type { GameMedia } from "@/content/games";
 
 type MediaGalleryProps = {
@@ -66,7 +67,7 @@ export function MediaGallery({ items, className }: MediaGalleryProps) {
               className="object-cover transition duration-500 group-hover:scale-105"
             />
             {item.caption ? (
-              <span className="absolute bottom-3 left-3 z-10 rounded-md bg-void/80 px-3 py-1 font-display text-[0.65rem] tracking-[0.16em] uppercase">
+              <span className={`absolute bottom-3 left-3 z-10 rounded-md bg-void/80 px-3 py-1 ${typography.eyebrow}`}>
                 {item.caption}
               </span>
             ) : null}
@@ -96,12 +97,12 @@ export function MediaGallery({ items, className }: MediaGalleryProps) {
               />
             </div>
             <div className="flex items-center justify-between gap-4 bg-panel px-4 py-3">
-              <p className="text-sm text-muted">
+              <p className={`${typography.small} text-muted`}>
                 {items[active].caption ?? items[active].alt}
               </p>
               <button
                 type="button"
-                className="font-display text-xs tracking-[0.16em] uppercase text-lime"
+                className={`${typography.nav} text-lime`}
                 onClick={() => setActive(null)}
               >
                 Close

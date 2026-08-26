@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { typography } from "@/lib/type";
 
 export default function ContactPage() {
   const { copy } = useSiteCopy();
@@ -19,12 +20,12 @@ export default function ContactPage() {
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
-        <Card className="glow-lime">
+        <Card>
           <p className="eyebrow">{copy.contact.discordEyebrow}</p>
-          <h2 className="mt-4 font-chaos text-4xl tracking-wide" style={{ color: "var(--title)" }}>
+          <h2 className={`mt-4 ${typography.h2}`} style={{ color: "var(--title)" }}>
             {copy.contact.discordTitle}
           </h2>
-          <p className="mt-3 text-sm leading-7 text-muted">
+          <p className={`${typography.small} mt-3 text-muted`}>
             {copy.contact.discordBody}
           </p>
           <div className="mt-8">
@@ -36,15 +37,15 @@ export default function ContactPage() {
 
         <Card>
           <p className="eyebrow">{copy.contact.emailEyebrow}</p>
-          <h2 className="mt-4 font-chaos text-4xl tracking-wide" style={{ color: "var(--title)" }}>
+          <h2 className={`mt-4 ${typography.h2}`} style={{ color: "var(--title)" }}>
             {copy.contact.emailTitle}
           </h2>
-          <p className="mt-3 text-sm leading-7 text-muted">
+          <p className={`${typography.small} mt-3 text-muted`}>
             {copy.contact.emailBody}
           </p>
           <a
             href={`mailto:${copy.studio.email}`}
-            className="mt-6 inline-block font-display text-sm tracking-[0.08em] text-lime"
+            className={`mt-6 inline-block ${typography.small} text-lime`}
           >
             {copy.studio.email}
           </a>

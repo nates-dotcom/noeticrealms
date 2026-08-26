@@ -17,6 +17,51 @@
   --header-h: 4.5rem;
   --heading: #ffe14a;
   --title: #fff6e8;
+
+  --type-display-size: clamp(4.4rem, 12vw, 8.4rem);
+  --type-display-tracking: 0.01em;
+  --type-display-leading: 0.86;
+
+  --type-h1-size: clamp(2.25rem, 5vw, 3.75rem);
+  --type-h1-tracking: 0.01em;
+  --type-h1-leading: 1.05;
+
+  --type-h2-size: clamp(1.85rem, 3.4vw, 2.25rem);
+  --type-h2-tracking: 0.01em;
+  --type-h2-leading: 1.08;
+
+  --type-h3-size: clamp(1.65rem, 2.6vw, 1.875rem);
+  --type-h3-tracking: 0.01em;
+  --type-h3-leading: 1.1;
+
+  --type-body-lg-size: clamp(1.05rem, 1.15vw, 1.2rem);
+  --type-body-lg-weight: 500;
+  --type-body-lg-tracking: 0;
+  --type-body-lg-leading: 1.6;
+
+  --type-body-size: 1rem;
+  --type-body-weight: 400;
+  --type-body-tracking: 0;
+  --type-body-leading: 1.6;
+
+  --type-small-size: 0.875rem;
+  --type-small-weight: 500;
+  --type-small-tracking: 0.01em;
+  --type-small-leading: 1.55;
+
+  --type-eyebrow-size: 0.72rem;
+  --type-eyebrow-weight: 700;
+  --type-eyebrow-tracking: 0.22em;
+  --type-eyebrow-leading: 1.2;
+
+  --type-nav-size: 0.68rem;
+  --type-nav-weight: 700;
+  --type-nav-tracking: 0.18em;
+  --type-nav-leading: 1.15;
+
+  --type-button-weight: 700;
+  --type-button-tracking: 0.14em;
+  --type-button-leading: 1.15;
 }
 
 @theme inline {
@@ -31,7 +76,7 @@
   --color-magenta: var(--magenta);
   --color-cyan: var(--cyan);
   --color-red: var(--red);
-  --font-sans: var(--font-outfit);
+  --font-sans: var(--font-manrope);
   --font-display: var(--font-orbitron);
   --font-chaos: var(--font-lilita);
   --shadow-sticker: 6px 6px 0 0 var(--magenta);
@@ -50,7 +95,11 @@ body {
 
 body {
   min-height: 100%;
-  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  letter-spacing: var(--type-body-tracking);
+  line-height: var(--type-body-leading);
   background:
     radial-gradient(1200px 600px at 8% -10%, rgba(255, 225, 74, 0.16), transparent 55%),
     radial-gradient(900px 500px at 100% 0%, rgba(255, 58, 20, 0.18), transparent 50%),
@@ -90,23 +139,113 @@ button.btn:hover {
   box-shadow: 8px 8px 0 0 var(--lime);
 }
 
-.font-display {
-  font-family: var(--font-orbitron), sans-serif;
-}
+/* -------------------------------------------------------------------------- */
+/* Typography tokens                                                           */
+/* -------------------------------------------------------------------------- */
 
-.font-chaos {
-  font-family: var(--font-lilita), "Arial Black", sans-serif;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  font-style: italic;
+@layer components {
+  .type-display,
+  .type-h1,
+  .type-h2,
+  .type-h3 {
+    font-family: var(--font-lilita), "Arial Black", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .type-display {
+    font-size: var(--type-display-size);
+    letter-spacing: var(--type-display-tracking);
+    line-height: var(--type-display-leading);
+  }
+
+  .type-h1 {
+    font-size: var(--type-h1-size);
+    letter-spacing: var(--type-h1-tracking);
+    line-height: var(--type-h1-leading);
+  }
+
+  .type-h2 {
+    font-size: var(--type-h2-size);
+    letter-spacing: var(--type-h2-tracking);
+    line-height: var(--type-h2-leading);
+  }
+
+  .type-h3 {
+    font-size: var(--type-h3-size);
+    letter-spacing: var(--type-h3-tracking);
+    line-height: var(--type-h3-leading);
+  }
+
+  .type-body-lg,
+  .lede {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-body-lg-size);
+    font-weight: var(--type-body-lg-weight);
+    letter-spacing: var(--type-body-lg-tracking);
+    line-height: var(--type-body-lg-leading);
+  }
+
+  .type-body {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-body-size);
+    font-weight: var(--type-body-weight);
+    letter-spacing: var(--type-body-tracking);
+    line-height: var(--type-body-leading);
+  }
+
+  .type-small {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-small-size);
+    font-weight: var(--type-small-weight);
+    letter-spacing: var(--type-small-tracking);
+    line-height: var(--type-small-leading);
+  }
+
+  .type-eyebrow,
+  .eyebrow,
+  .type-nav,
+  .type-button {
+    font-family: var(--font-orbitron), sans-serif;
+    text-transform: uppercase;
+  }
+
+  .type-eyebrow,
+  .eyebrow {
+    font-size: var(--type-eyebrow-size);
+    font-weight: var(--type-eyebrow-weight);
+    letter-spacing: var(--type-eyebrow-tracking);
+    line-height: var(--type-eyebrow-leading);
+  }
+
+  .eyebrow {
+    color: var(--lime);
+  }
+
+  .type-nav {
+    font-size: var(--type-nav-size);
+    font-weight: var(--type-nav-weight);
+    letter-spacing: var(--type-nav-tracking);
+    line-height: var(--type-nav-leading);
+  }
+
+  .type-button {
+    font-weight: var(--type-button-weight);
+    letter-spacing: var(--type-button-tracking);
+    line-height: var(--type-button-leading);
+  }
 }
 
 .wordmark {
   display: inline-block;
+  position: relative;
+  z-index: 0;
   font-family: var(--font-lilita), "Arial Black", sans-serif;
+  font-size: var(--type-display-size);
   font-style: italic;
-  letter-spacing: 0.01em;
-  line-height: 0.86;
+  letter-spacing: var(--type-display-tracking);
+  line-height: var(--type-display-leading);
   text-transform: uppercase;
   color: var(--heading, #ffe14a);
   -webkit-text-stroke: 0.06em #111;
@@ -116,7 +255,12 @@ button.btn:hover {
     0.09em 0.1em 0 #111,
     0.12em 0.14em 0 var(--magenta);
   transform: rotate(-8deg);
-  transform-origin: left center;
+  /* Keep the first line planted so the tilt swings down-right, not into the badges. */
+  transform-origin: left 0.5em;
+}
+
+.wordmark-compact {
+  font-size: clamp(4.5rem, 10vw, 6rem);
 }
 
 .vr-mark {
@@ -141,22 +285,6 @@ button.btn:hover {
   box-shadow: 0.1em 0.1em 0 var(--magenta);
 }
 
-.eyebrow {
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--lime);
-}
-
-.lede {
-  font-family: var(--font-exo), sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.7;
-}
-
 .ticker {
   display: flex;
   overflow: hidden;
@@ -172,16 +300,39 @@ button.btn:hover {
 
 .ticker-item {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 1.25rem;
   padding: 0.7rem 1.5rem;
   font-family: var(--font-orbitron), sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-button-weight);
+  letter-spacing: var(--type-button-tracking);
+  line-height: var(--type-button-leading);
   text-transform: uppercase;
   white-space: nowrap;
-  color: var(--muted);
+  color: var(--ink);
+}
+
+.ticker-vertical {
+  width: 2.85rem;
+  height: 100%;
+  border-block: 0;
+  border-inline-end: 1px solid var(--line);
+}
+
+.ticker-vertical .ticker-track {
+  flex-direction: column;
+  width: 100%;
+  animation-name: ticker-scroll-y;
+  animation-duration: 36s;
+}
+
+.ticker-vertical .ticker-item {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  gap: 0.85rem;
+  padding: 1.35rem 0.45rem;
 }
 
 .ticker-dot {
@@ -233,6 +384,15 @@ button.btn:hover {
   }
 }
 
+@keyframes ticker-scroll-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
 .admin-input {
   width: 100%;
   border-radius: 0.75rem;
@@ -240,7 +400,10 @@ button.btn:hover {
   background: var(--void-2);
   padding: 0.75rem 0.9rem;
   color: var(--ink);
-  font-size: 0.95rem;
+  font-family: inherit;
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  letter-spacing: var(--type-body-tracking);
   line-height: 1.5;
 }
 
