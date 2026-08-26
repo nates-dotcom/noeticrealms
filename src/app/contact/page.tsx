@@ -2,7 +2,6 @@
 
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { typography } from "@/lib/type";
@@ -19,13 +18,13 @@ export default function ContactPage() {
         description={copy.contact.description}
       />
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-2">
-        <Card className="glow-lime">
+      <div className="mt-16 grid gap-12 border-t border-line pt-12 lg:grid-cols-2 lg:gap-20">
+        <div>
           <p className="eyebrow">{copy.contact.discordEyebrow}</p>
           <h2 className={`mt-4 ${typography.h2}`} style={{ color: "var(--title)" }}>
             {copy.contact.discordTitle}
           </h2>
-          <p className={`${typography.small} mt-3 text-muted`}>
+          <p className={`${typography.body} mt-4 max-w-md text-muted`}>
             {copy.contact.discordBody}
           </p>
           <div className="mt-8">
@@ -33,14 +32,14 @@ export default function ContactPage() {
               Join {copy.studio.discordLabel}
             </Button>
           </div>
-        </Card>
+        </div>
 
-        <Card>
+        <div className="lg:border-l lg:border-line lg:pl-20">
           <p className="eyebrow">{copy.contact.emailEyebrow}</p>
           <h2 className={`mt-4 ${typography.h2}`} style={{ color: "var(--title)" }}>
             {copy.contact.emailTitle}
           </h2>
-          <p className={`${typography.small} mt-3 text-muted`}>
+          <p className={`${typography.body} mt-4 max-w-md text-muted`}>
             {copy.contact.emailBody}
           </p>
           <a
@@ -54,7 +53,7 @@ export default function ContactPage() {
               {copy.contact.emailCta}
             </Button>
           </div>
-        </Card>
+        </div>
       </div>
     </Container>
   );

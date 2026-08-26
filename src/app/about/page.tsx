@@ -2,7 +2,6 @@
 
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { typography } from "@/lib/type";
@@ -20,35 +19,35 @@ export default function AboutPage() {
         description={copy.about.description}
       />
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-2">
-        <Card>
+      <div className="mt-16 grid gap-12 border-t border-line pt-12 lg:grid-cols-2 lg:gap-20">
+        <div>
           <p className="eyebrow">{copy.about.whoEyebrow}</p>
-          <p className={`${typography.body} mt-4 text-muted`}>
+          <p className={`${typography.bodyLg} mt-5 text-muted`}>
             {copy.about.whoBody}
           </p>
-        </Card>
-        <Card className="bg-panel-2">
+        </div>
+        <div>
           <p className="eyebrow">{copy.about.howEyebrow}</p>
-          <ul className={`${typography.body} mt-4 space-y-4 text-muted`}>
+          <ul className={`${typography.body} mt-5 space-y-5 text-muted`}>
             {copy.about.howItems.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </Card>
+        </div>
       </div>
 
-      <div className="mt-6 grid gap-6 md:grid-cols-3">
+      <dl className="mt-16 grid gap-8 border-t border-line pt-10 sm:grid-cols-3">
         {copy.about.stats.map((item) => (
-          <Card key={item.label}>
-            <p className="eyebrow">{item.label}</p>
-            <p className={`mt-3 ${typography.h3}`} style={{ color: "var(--title)" }}>
+          <div key={item.label}>
+            <dt className="eyebrow">{item.label}</dt>
+            <dd className={`mt-3 ${typography.h2}`} style={{ color: "var(--title)" }}>
               {item.value}
-            </p>
-          </Card>
+            </dd>
+          </div>
         ))}
-      </div>
+      </dl>
 
-      <div className="mt-12 flex flex-wrap gap-4">
+      <div className="mt-14 flex flex-wrap gap-4">
         <Button href={copy.studio.wishlistUrl} external>
           {copy.about.ctaLabel}
         </Button>

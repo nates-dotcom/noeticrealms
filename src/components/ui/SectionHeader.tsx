@@ -9,6 +9,7 @@ type SectionHeaderProps = {
   align?: "left" | "center";
   className?: string;
   as?: "h1" | "h2";
+  chaos?: boolean;
 };
 
 export function SectionHeader({
@@ -19,6 +20,7 @@ export function SectionHeader({
   align = "left",
   className,
   as: Heading = "h2",
+  chaos = false,
 }: SectionHeaderProps) {
   const highlighted = highlight
     ? title.split(new RegExp(`(${highlight})`, "i")).map((part, index) =>
@@ -41,7 +43,10 @@ export function SectionHeader({
       )}
     >
       {eyebrow ? <p className={`${typography.eyebrow} mb-4 text-lime`}>{eyebrow}</p> : null}
-      <Heading className={typography.h1} style={{ color: "var(--title)" }}>
+      <Heading
+        className={chaos ? typography.chaos : typography.h1}
+        style={{ color: "var(--title)" }}
+      >
         {highlighted}
       </Heading>
       {description ? (

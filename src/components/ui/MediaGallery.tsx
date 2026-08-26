@@ -49,7 +49,7 @@ export function MediaGallery({ items, className }: MediaGalleryProps) {
             type="button"
             onClick={() => setActive(index)}
             className={cn(
-              "group frame relative overflow-hidden rounded-[var(--radius)] text-left",
+              "group relative overflow-hidden text-left",
               index === 0
                 ? "aspect-[716/1024] sm:col-span-2 lg:row-span-2"
                 : "aspect-[16/9]",
@@ -64,7 +64,7 @@ export function MediaGallery({ items, className }: MediaGalleryProps) {
                   ? "(min-width: 1024px) 66vw, 100vw"
                   : "(min-width: 1024px) 33vw, 50vw"
               }
-              className="object-cover transition duration-500 group-hover:scale-105"
+              className="art-shift object-cover"
             />
             {item.caption ? (
               <span className={`absolute bottom-3 left-3 z-10 rounded-md bg-void/80 px-3 py-1 ${typography.eyebrow}`}>
