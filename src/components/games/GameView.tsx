@@ -62,12 +62,14 @@ export function GameView({
               </div>
               <Badge tone="magenta">{game.genres}</Badge>
             </div>
-            <h1 aria-label={game.title} className="wordmark mt-14 sm:mt-16">
-              {game.wordmarkLine1}
-              <br />
-              {game.wordmarkLine2}
-              <span className="vr-mark">{game.vrMark}</span>
-            </h1>
+            <div className="relative z-0 mt-4 pt-10 sm:mt-6 sm:pt-6">
+              <h1 aria-label={game.title} className="wordmark">
+                {game.wordmarkLine1}
+                <br />
+                {game.wordmarkLine2}
+                <span className="vr-mark">{game.vrMark}</span>
+              </h1>
+            </div>
             <p className="lede mt-8 max-w-xl text-muted">
               {game.summary}
             </p>

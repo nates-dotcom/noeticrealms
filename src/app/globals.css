@@ -239,6 +239,8 @@ button.btn:hover {
 
 .wordmark {
   display: inline-block;
+  position: relative;
+  z-index: 0;
   font-family: var(--font-lilita), "Arial Black", sans-serif;
   font-size: var(--type-display-size);
   font-style: italic;
