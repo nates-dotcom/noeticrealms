@@ -1,14 +1,13 @@
 /**
- * Typography tokens → CSS classes in globals.css.
- * Manrope is the site typeface. Lilita One is reserved for the game wordmark
- * and a few Duel Me Bro display moments.
+ * Reusable typography tokens. Each value is a CSS class defined in globals.css.
+ * Display / headings use Lilita One; nav, buttons, and labels use Orbitron;
+ * body roles use Manrope.
  */
 export const typography = {
   display: "type-display",
   h1: "type-h1",
   h2: "type-h2",
   h3: "type-h3",
-  chaos: "type-chaos",
   bodyLg: "type-body-lg",
   body: "type-body",
   small: "type-small",

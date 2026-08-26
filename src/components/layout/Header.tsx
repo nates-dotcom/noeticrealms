@@ -40,10 +40,9 @@ export function Header() {
                 href={link.href}
                 className={cn(
                   typography.nav,
-                  "nav-link transition-colors",
+                  "transition",
                   active ? "text-lime" : "text-muted hover:text-ink",
                 )}
-                data-active={active ? "true" : undefined}
               >
                 {link.label}
               </Link>
@@ -101,7 +100,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={typography.h2}
+              className={typography.h3}
               onClick={() => setOpen(false)}
             >
               {link.label}

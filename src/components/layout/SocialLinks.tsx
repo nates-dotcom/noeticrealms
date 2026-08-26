@@ -20,7 +20,7 @@ export function SocialLinks({ className }: { className?: string }) {
           target="_blank"
           rel="noreferrer"
           aria-label={social.label}
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-lime hover:text-lime"
+          className="flex h-12 w-12 items-center justify-center rounded-md border border-line text-muted transition hover:border-lime/50 hover:text-lime"
         >
           <social.icon />
         </a>

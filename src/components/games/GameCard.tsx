@@ -1,52 +1,64 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
+import { Card } from "@/components/ui/Card";
 import { statusCopy, type Game } from "@/content/games";
+import { cn } from "@/lib/cn";
 import { typography } from "@/lib/type";
 
-export function GameCard({ game }: { game: Game }) {
+export function GameCard({ game, featured = false }: { game: Game; featured?: boolean }) {
   return (
-    <Link href={`/games/${game.slug}`} className="group block">
-      <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-        <div>
-          <p className={`${typography.eyebrow} text-magenta`}>Featured title</p>
-          <h2 className={`mt-4 ${typography.h1}`} style={{ color: "var(--title)" }}>
-            {game.shortName}
-          </h2>
-          <p className={`${typography.bodyLg} mt-4 max-w-md text-muted`}>{game.tagline}</p>
-          <p className={`${typography.small} mt-6 text-muted`}>
-            {statusCopy[game.status]} · {game.platforms.join(" · ")}
-          </p>
-          <p className={`${typography.nav} mt-8 text-lime`}>
-            Enter the arena
-          </p>
-        </div>
-        <div className="sticker relative mx-auto aspect-[716/1024] w-full max-w-md overflow-hidden lg:max-w-lg lg:translate-x-4">
+    <Link href={`/games/${game.slug}`} className="group block h-full">
+      <Card
+        padded={false}
+        className={cn(
+          "h-full transition duration-200 hover:border-lime/50",
+          featured && "border-lime/35",
+        )}
+      >
+        <div className="relative aspect-[716/1024] overflow-hidden">
           <Image
             src={game.cover}
             alt={`${game.title} cover art`}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
-            className="art-shift object-cover"
+            className="object-cover object-top"
           />
           <div className="absolute left-4 top-4">
             <Badge>{statusCopy[game.status]}</Badge>
           </div>
         </div>
-      </div>
+        <div className="p-6">
+          <p className={`${typography.eyebrow} text-magenta`}>Featured title</p>
+          <h3 className={`mt-3 ${typography.h2}`}>
+            {game.shortName}
+          </h3>
+          <p className={`${typography.small} mt-2 text-muted`}>{game.tagline}</p>
+          <p className={`${typography.eyebrow} mt-4 text-cyan`}>
+            {game.platforms.join(" · ")}
+          </p>
+        </div>
+      </Card>
     </Link>
   );
 }
 
 export function IncomingGameCard() {
   return (
-    <div className="max-w-lg border-t border-line pt-10">
-      <p className={`${typography.eyebrow} text-muted`}>Next realm</p>
-      <h2 className={`mt-4 ${typography.h2} text-muted`}>More games incoming</h2>
-      <p className={`${typography.body} mt-4 text-muted`}>
-        Duel Me Bro is first through the door. Additional titles drop here as they
-        are ready to show.
+    <Card className="flex h-full min-h-[22rem] flex-col justify-between border-dashed bg-transparent">
+      <div>
+        <Badge tone="muted">Next realm</Badge>
+        <h3 className={`mt-5 ${typography.h2} text-muted`}>
+          More games incoming
+        </h3>
+        <p className={`${typography.small} mt-3 max-w-sm text-muted`}>
+          Duel Me Bro is first through the door. Additional titles drop into this
+          grid as they are ready to show.
+        </p>
+      </div>
+      <p className={`${typography.eyebrow} text-lime`}>
+        Coming later
       </p>
-    </div>
+    </Card>
   );
 }

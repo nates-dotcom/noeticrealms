@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
-import { Lilita_One, Manrope } from "next/font/google";
+import { Lilita_One, Manrope, Orbitron } from "next/font/google";
 import { SiteCopyProvider } from "@/components/content/SiteCopyProvider";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { studio } from "@/content/studio";
@@ -12,6 +12,13 @@ export const dynamic = "force-dynamic";
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
   display: "swap",
 });
 
@@ -52,8 +59,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      data-scroll-behavior="smooth"
-      className={`${manrope.variable} ${lilita.variable} h-full antialiased`}
+      className={`${manrope.variable} ${orbitron.variable} ${lilita.variable} h-full antialiased`}
       style={
         {
           "--heading": initialCopy.headingColor,

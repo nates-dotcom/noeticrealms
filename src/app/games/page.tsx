@@ -18,11 +18,11 @@ export default function GamesPage() {
         eyebrow="The lineup"
         title="Games from the realm"
         highlight="realm"
-        description="Duel Me Bro leads the lineup. Coming soon on Meta Quest. Every new title gets its own page as it is ready to show."
+        description="Duel Me Bro leads the lineup. Coming soon on Meta Quest. Every new title gets its own page, gallery, and feature set as it is ready to show."
       />
-      <div className="mt-16 space-y-20">
+      <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {games.map((game) => (
-          <GameCard key={game.slug} game={game} />
+          <GameCard key={game.slug} game={game} featured={game.slug === "duel-me-bro"} />
         ))}
         <IncomingGameCard />
       </div>

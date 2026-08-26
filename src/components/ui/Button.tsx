@@ -37,7 +37,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-xl transition-[box-shadow,transform] duration-200",
+    "inline-flex items-center justify-center gap-2 rounded-xl transition duration-200 hover:-translate-y-0.5",
     typography.button,
     variants[variant],
     sizes[size],

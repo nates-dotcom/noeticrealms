@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GameView } from "@/components/games/GameView";
 import { games, getGame } from "@/content/games";
-import { duelGameplay } from "@/content/gameplay";
-import { publicFileExists } from "@/lib/public-file";
 import { readSiteCopy } from "@/lib/site-copy-store";
 
 export const dynamic = "force-dynamic";
@@ -34,11 +32,5 @@ export default async function GamePage({ params }: PageProps<"/games/[slug]">) {
   const game = getGame(slug);
   if (!game) notFound();
 
-  return (
-    <GameView
-      cover={game.cover}
-      hero={game.hero}
-      hasGameplayVideo={await publicFileExists(duelGameplay.src)}
-    />
-  );
+  return <GameView cover={game.cover} hero={game.hero} />;
 }
