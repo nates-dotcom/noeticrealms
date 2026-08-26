@@ -1,6 +1,7 @@
 /**
  * Reusable typography tokens. Each value is a CSS class defined in globals.css.
- * Prefer these over ad-hoc font-size / weight / tracking utilities.
+ * Display / headings use Lilita One; nav, buttons, and labels use Orbitron;
+ * body roles use Manrope.
  */
 export const typography = {
   display: "type-display",

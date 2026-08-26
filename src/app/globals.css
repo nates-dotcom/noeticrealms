@@ -18,25 +18,21 @@
   --heading: #ffe14a;
   --title: #fff6e8;
 
-  --type-display-size: clamp(3.15rem, 12.5vw, 8.25rem);
-  --type-display-weight: 800;
-  --type-display-tracking: -0.04em;
-  --type-display-leading: 0.98;
+  --type-display-size: clamp(4.4rem, 12vw, 8.4rem);
+  --type-display-tracking: 0.01em;
+  --type-display-leading: 0.86;
 
-  --type-h1-size: clamp(2.05rem, 4.6vw, 3.55rem);
-  --type-h1-weight: 800;
-  --type-h1-tracking: -0.03em;
+  --type-h1-size: clamp(2.25rem, 5vw, 3.75rem);
+  --type-h1-tracking: 0.01em;
   --type-h1-leading: 1.05;
 
-  --type-h2-size: clamp(1.7rem, 3vw, 2.35rem);
-  --type-h2-weight: 700;
-  --type-h2-tracking: -0.022em;
-  --type-h2-leading: 1.12;
+  --type-h2-size: clamp(1.85rem, 3.4vw, 2.25rem);
+  --type-h2-tracking: 0.01em;
+  --type-h2-leading: 1.08;
 
-  --type-h3-size: clamp(1.28rem, 2.1vw, 1.7rem);
-  --type-h3-weight: 700;
-  --type-h3-tracking: -0.018em;
-  --type-h3-leading: 1.16;
+  --type-h3-size: clamp(1.65rem, 2.6vw, 1.875rem);
+  --type-h3-tracking: 0.01em;
+  --type-h3-leading: 1.1;
 
   --type-body-lg-size: clamp(1.05rem, 1.15vw, 1.2rem);
   --type-body-lg-weight: 500;
@@ -53,18 +49,18 @@
   --type-small-tracking: 0.01em;
   --type-small-leading: 1.55;
 
-  --type-eyebrow-size: 0.6875rem;
-  --type-eyebrow-weight: 600;
-  --type-eyebrow-tracking: 0.12em;
+  --type-eyebrow-size: 0.72rem;
+  --type-eyebrow-weight: 700;
+  --type-eyebrow-tracking: 0.22em;
   --type-eyebrow-leading: 1.2;
 
-  --type-nav-size: 0.8rem;
-  --type-nav-weight: 600;
-  --type-nav-tracking: 0.07em;
+  --type-nav-size: 0.68rem;
+  --type-nav-weight: 700;
+  --type-nav-tracking: 0.18em;
   --type-nav-leading: 1.15;
 
   --type-button-weight: 700;
-  --type-button-tracking: 0.06em;
+  --type-button-tracking: 0.14em;
   --type-button-leading: 1.15;
 }
 
@@ -81,6 +77,8 @@
   --color-cyan: var(--cyan);
   --color-red: var(--red);
   --font-sans: var(--font-manrope);
+  --font-display: var(--font-orbitron);
+  --font-chaos: var(--font-lilita);
   --shadow-sticker: 6px 6px 0 0 var(--magenta);
   --shadow-sticker-lime: 6px 6px 0 0 var(--lime);
 }
@@ -146,34 +144,36 @@ button.btn:hover {
 /* -------------------------------------------------------------------------- */
 
 @layer components {
+  .type-display,
+  .type-h1,
+  .type-h2,
+  .type-h3 {
+    font-family: var(--font-lilita), "Arial Black", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
   .type-display {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-size: var(--type-display-size);
-    font-weight: var(--type-display-weight);
     letter-spacing: var(--type-display-tracking);
     line-height: var(--type-display-leading);
   }
 
   .type-h1 {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-size: var(--type-h1-size);
-    font-weight: var(--type-h1-weight);
     letter-spacing: var(--type-h1-tracking);
     line-height: var(--type-h1-leading);
   }
 
   .type-h2 {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-size: var(--type-h2-size);
-    font-weight: var(--type-h2-weight);
     letter-spacing: var(--type-h2-tracking);
     line-height: var(--type-h2-leading);
   }
 
   .type-h3 {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-size: var(--type-h3-size);
-    font-weight: var(--type-h3-weight);
     letter-spacing: var(--type-h3-tracking);
     line-height: var(--type-h3-leading);
   }
@@ -204,13 +204,19 @@ button.btn:hover {
   }
 
   .type-eyebrow,
+  .eyebrow,
+  .type-nav,
+  .type-button {
+    font-family: var(--font-orbitron), sans-serif;
+    text-transform: uppercase;
+  }
+
+  .type-eyebrow,
   .eyebrow {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-size: var(--type-eyebrow-size);
     font-weight: var(--type-eyebrow-weight);
     letter-spacing: var(--type-eyebrow-tracking);
     line-height: var(--type-eyebrow-leading);
-    text-transform: uppercase;
   }
 
   .eyebrow {
@@ -218,34 +224,29 @@ button.btn:hover {
   }
 
   .type-nav {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-size: var(--type-nav-size);
     font-weight: var(--type-nav-weight);
     letter-spacing: var(--type-nav-tracking);
     line-height: var(--type-nav-leading);
-    text-transform: uppercase;
   }
 
   .type-button {
-    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
     font-weight: var(--type-button-weight);
     letter-spacing: var(--type-button-tracking);
     line-height: var(--type-button-leading);
-    text-transform: uppercase;
   }
 }
 
 .wordmark {
   display: inline-block;
-  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-lilita), "Arial Black", sans-serif;
   font-size: var(--type-display-size);
-  font-weight: var(--type-display-weight);
   font-style: italic;
   letter-spacing: var(--type-display-tracking);
-  line-height: 0.95;
+  line-height: var(--type-display-leading);
   text-transform: uppercase;
   color: var(--heading, #ffe14a);
-  -webkit-text-stroke: 0.055em #111;
+  -webkit-text-stroke: 0.06em #111;
   paint-order: stroke fill;
   text-shadow:
     0.05em 0.05em 0 #111,
@@ -256,7 +257,7 @@ button.btn:hover {
 }
 
 .wordmark-compact {
-  font-size: clamp(2.75rem, 9vw, 6rem);
+  font-size: clamp(4.5rem, 10vw, 6rem);
 }
 
 .vr-mark {
@@ -268,12 +269,11 @@ button.btn:hover {
   border-radius: 0.28em;
   background: var(--lime);
   color: #111;
-  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-lilita), "Arial Black", sans-serif;
   font-style: italic;
-  font-size: 0.28em;
-  font-weight: 800;
+  font-size: 0.3em;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   vertical-align: 0.22em;
   transform: rotate(-8deg);
   -webkit-text-stroke: 0;
@@ -300,7 +300,7 @@ button.btn:hover {
   align-items: center;
   gap: 1.25rem;
   padding: 0.7rem 1.5rem;
-  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-orbitron), sans-serif;
   font-size: var(--type-eyebrow-size);
   font-weight: var(--type-eyebrow-weight);
   letter-spacing: var(--type-eyebrow-tracking);
@@ -376,13 +376,6 @@ button.btn:hover {
 .admin-input:focus {
   outline: 2px solid color-mix(in srgb, var(--lime) 70%, transparent);
   outline-offset: 1px;
-}
-
-@media (max-width: 639px) {
-  .wordmark {
-    letter-spacing: -0.045em;
-    line-height: 0.96;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
