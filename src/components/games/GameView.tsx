@@ -55,12 +55,14 @@ export function GameView({
         </div>
         <Container className="relative grid items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
-            <div className="relative z-20 flex flex-wrap gap-3">
-              <Badge>{game.statusLabel}</Badge>
-              <Badge tone="cyan">{game.platforms}</Badge>
+            <div className="relative z-20 flex flex-col items-start gap-2.5">
+              <div className="flex flex-wrap gap-2.5">
+                <Badge>{game.statusLabel}</Badge>
+                <Badge tone="cyan">{game.platforms}</Badge>
+              </div>
               <Badge tone="magenta">{game.genres}</Badge>
             </div>
-            <h1 aria-label={game.title} className="wordmark mt-12 sm:mt-16">
+            <h1 aria-label={game.title} className="wordmark mt-14 sm:mt-16">
               {game.wordmarkLine1}
               <br />
               {game.wordmarkLine2}

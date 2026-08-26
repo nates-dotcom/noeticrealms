@@ -253,8 +253,8 @@ button.btn:hover {
     0.09em 0.1em 0 #111,
     0.12em 0.14em 0 var(--magenta);
   transform: rotate(-8deg);
-  /* Lower origin so the tilt does not cover the badges above. */
-  transform-origin: left 1.4em;
+  /* Keep the first line planted so the tilt swings down-right, not into the badges. */
+  transform-origin: left 0.5em;
 }
 
 .wordmark-compact {
