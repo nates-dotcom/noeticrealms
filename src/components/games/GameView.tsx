@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { typography } from "@/lib/type";
 
 export function GameView({
   cover,
@@ -41,14 +42,14 @@ export function GameView({
             </div>
             <h1
               aria-label={game.title}
-              className="wordmark mt-8 text-[4.4rem] sm:text-[7rem] lg:text-[8.4rem]"
+              className="wordmark mt-8"
             >
               {game.wordmarkLine1}
               <br />
               {game.wordmarkLine2}
               <span className="vr-mark">{game.vrMark}</span>
             </h1>
-            <p className="lede mt-8 max-w-xl text-lg leading-8 text-muted">
+            <p className="lede mt-8 max-w-xl text-muted">
               {game.summary}
             </p>
             <div className="mt-8">
@@ -72,7 +73,7 @@ export function GameView({
 
       <Container as="section" className="py-16 sm:py-24">
         <SectionHeader eyebrow={game.pitchEyebrow} title={game.tagline} />
-        <div className="mt-8 max-w-3xl space-y-5 text-base leading-8 text-muted">
+        <div className={`${typography.body} mt-8 max-w-3xl space-y-5 text-muted`}>
           {game.description.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

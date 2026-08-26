@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 
 type LogoProps = {
   className?: string;
@@ -12,7 +13,7 @@ export function Logo({ className, markClassName, showWordmark = true }: LogoProp
     <span className={cn("inline-flex items-center gap-3 text-ink", className)}>
       <LogoMark className={markClassName} />
       {showWordmark ? (
-        <span className="font-display text-[0.72rem] font-extrabold leading-tight tracking-[0.22em] uppercase sm:text-[0.78rem]">
+        <span className={`${typography.nav} leading-tight`}>
           Noetic
           <br />
           Realms

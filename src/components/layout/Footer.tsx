@@ -5,6 +5,7 @@ import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { siteNav } from "@/content/site-copy";
+import { typography } from "@/lib/type";
 
 export function Footer() {
   const { copy } = useSiteCopy();
@@ -17,7 +18,7 @@ export function Footer() {
           <Link href="/games/duel-me-bro" aria-label={copy.game.title}>
             <Logo markClassName="h-11 w-11" />
           </Link>
-          <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
+          <p className={`${typography.small} mt-5 max-w-sm text-muted`}>
             {copy.studio.description}
           </p>
         </div>
@@ -29,7 +30,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-muted transition hover:text-lime"
+                  className={`${typography.small} text-muted transition hover:text-lime`}
                 >
                   {link.label}
                 </Link>
@@ -40,7 +41,7 @@ export function Footer() {
 
         <div>
           <p className="eyebrow">Squad up</p>
-          <ul className="mt-4 space-y-3 text-sm">
+          <ul className={`${typography.small} mt-4 space-y-3`}>
             <li>
               <a
                 href={copy.studio.wishlistUrl}
@@ -104,11 +105,11 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-line">
-        <Container className="flex flex-col gap-3 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
+        <Container className="flex flex-col gap-3 py-5 text-muted sm:flex-row sm:items-center sm:justify-between">
+          <p className={typography.small}>
             © 2026 {copy.studio.name}. All rights reserved.
           </p>
-          <p className="font-display tracking-[0.16em] uppercase">
+          <p className={typography.eyebrow}>
             {copy.studio.footerLine}
           </p>
         </Container>

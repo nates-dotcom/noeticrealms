@@ -17,6 +17,55 @@
   --header-h: 4.5rem;
   --heading: #ffe14a;
   --title: #fff6e8;
+
+  --type-display-size: clamp(3.15rem, 12.5vw, 8.25rem);
+  --type-display-weight: 800;
+  --type-display-tracking: -0.04em;
+  --type-display-leading: 0.98;
+
+  --type-h1-size: clamp(2.05rem, 4.6vw, 3.55rem);
+  --type-h1-weight: 800;
+  --type-h1-tracking: -0.03em;
+  --type-h1-leading: 1.05;
+
+  --type-h2-size: clamp(1.7rem, 3vw, 2.35rem);
+  --type-h2-weight: 700;
+  --type-h2-tracking: -0.022em;
+  --type-h2-leading: 1.12;
+
+  --type-h3-size: clamp(1.28rem, 2.1vw, 1.7rem);
+  --type-h3-weight: 700;
+  --type-h3-tracking: -0.018em;
+  --type-h3-leading: 1.16;
+
+  --type-body-lg-size: clamp(1.05rem, 1.15vw, 1.2rem);
+  --type-body-lg-weight: 500;
+  --type-body-lg-tracking: 0;
+  --type-body-lg-leading: 1.6;
+
+  --type-body-size: 1rem;
+  --type-body-weight: 400;
+  --type-body-tracking: 0;
+  --type-body-leading: 1.6;
+
+  --type-small-size: 0.875rem;
+  --type-small-weight: 500;
+  --type-small-tracking: 0.01em;
+  --type-small-leading: 1.55;
+
+  --type-eyebrow-size: 0.6875rem;
+  --type-eyebrow-weight: 600;
+  --type-eyebrow-tracking: 0.12em;
+  --type-eyebrow-leading: 1.2;
+
+  --type-nav-size: 0.8rem;
+  --type-nav-weight: 600;
+  --type-nav-tracking: 0.07em;
+  --type-nav-leading: 1.15;
+
+  --type-button-weight: 700;
+  --type-button-tracking: 0.06em;
+  --type-button-leading: 1.15;
 }
 
 @theme inline {
@@ -31,9 +80,7 @@
   --color-magenta: var(--magenta);
   --color-cyan: var(--cyan);
   --color-red: var(--red);
-  --font-sans: var(--font-outfit);
-  --font-display: var(--font-orbitron);
-  --font-chaos: var(--font-lilita);
+  --font-sans: var(--font-manrope);
   --shadow-sticker: 6px 6px 0 0 var(--magenta);
   --shadow-sticker-lime: 6px 6px 0 0 var(--lime);
 }
@@ -50,7 +97,11 @@ body {
 
 body {
   min-height: 100%;
-  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  letter-spacing: var(--type-body-tracking);
+  line-height: var(--type-body-leading);
   background:
     radial-gradient(1200px 600px at 8% -10%, rgba(255, 225, 74, 0.16), transparent 55%),
     radial-gradient(900px 500px at 100% 0%, rgba(255, 58, 20, 0.18), transparent 50%),
@@ -90,26 +141,111 @@ button.btn:hover {
   box-shadow: 8px 8px 0 0 var(--lime);
 }
 
-.font-display {
-  font-family: var(--font-orbitron), sans-serif;
-}
+/* -------------------------------------------------------------------------- */
+/* Typography tokens                                                           */
+/* -------------------------------------------------------------------------- */
 
-.font-chaos {
-  font-family: var(--font-lilita), "Arial Black", sans-serif;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  font-style: italic;
+@layer components {
+  .type-display {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-display-size);
+    font-weight: var(--type-display-weight);
+    letter-spacing: var(--type-display-tracking);
+    line-height: var(--type-display-leading);
+  }
+
+  .type-h1 {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-h1-size);
+    font-weight: var(--type-h1-weight);
+    letter-spacing: var(--type-h1-tracking);
+    line-height: var(--type-h1-leading);
+  }
+
+  .type-h2 {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-h2-size);
+    font-weight: var(--type-h2-weight);
+    letter-spacing: var(--type-h2-tracking);
+    line-height: var(--type-h2-leading);
+  }
+
+  .type-h3 {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-h3-size);
+    font-weight: var(--type-h3-weight);
+    letter-spacing: var(--type-h3-tracking);
+    line-height: var(--type-h3-leading);
+  }
+
+  .type-body-lg,
+  .lede {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-body-lg-size);
+    font-weight: var(--type-body-lg-weight);
+    letter-spacing: var(--type-body-lg-tracking);
+    line-height: var(--type-body-lg-leading);
+  }
+
+  .type-body {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-body-size);
+    font-weight: var(--type-body-weight);
+    letter-spacing: var(--type-body-tracking);
+    line-height: var(--type-body-leading);
+  }
+
+  .type-small {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-small-size);
+    font-weight: var(--type-small-weight);
+    letter-spacing: var(--type-small-tracking);
+    line-height: var(--type-small-leading);
+  }
+
+  .type-eyebrow,
+  .eyebrow {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-eyebrow-size);
+    font-weight: var(--type-eyebrow-weight);
+    letter-spacing: var(--type-eyebrow-tracking);
+    line-height: var(--type-eyebrow-leading);
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    color: var(--lime);
+  }
+
+  .type-nav {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--type-nav-size);
+    font-weight: var(--type-nav-weight);
+    letter-spacing: var(--type-nav-tracking);
+    line-height: var(--type-nav-leading);
+    text-transform: uppercase;
+  }
+
+  .type-button {
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    font-weight: var(--type-button-weight);
+    letter-spacing: var(--type-button-tracking);
+    line-height: var(--type-button-leading);
+    text-transform: uppercase;
+  }
 }
 
 .wordmark {
   display: inline-block;
-  font-family: var(--font-lilita), "Arial Black", sans-serif;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
   font-style: italic;
-  letter-spacing: 0.01em;
-  line-height: 0.86;
+  letter-spacing: var(--type-display-tracking);
+  line-height: 0.95;
   text-transform: uppercase;
   color: var(--heading, #ffe14a);
-  -webkit-text-stroke: 0.06em #111;
+  -webkit-text-stroke: 0.055em #111;
   paint-order: stroke fill;
   text-shadow:
     0.05em 0.05em 0 #111,
@@ -117,6 +253,10 @@ button.btn:hover {
     0.12em 0.14em 0 var(--magenta);
   transform: rotate(-8deg);
   transform-origin: left center;
+}
+
+.wordmark-compact {
+  font-size: clamp(2.75rem, 9vw, 6rem);
 }
 
 .vr-mark {
@@ -128,33 +268,18 @@ button.btn:hover {
   border-radius: 0.28em;
   background: var(--lime);
   color: #111;
-  font-family: var(--font-lilita), "Arial Black", sans-serif;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   font-style: italic;
-  font-size: 0.3em;
+  font-size: 0.28em;
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   vertical-align: 0.22em;
   transform: rotate(-8deg);
   -webkit-text-stroke: 0;
   paint-order: normal;
   text-shadow: none;
   box-shadow: 0.1em 0.1em 0 var(--magenta);
-}
-
-.eyebrow {
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--lime);
-}
-
-.lede {
-  font-family: var(--font-exo), sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.7;
 }
 
 .ticker {
@@ -175,10 +300,11 @@ button.btn:hover {
   align-items: center;
   gap: 1.25rem;
   padding: 0.7rem 1.5rem;
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-tracking);
+  line-height: var(--type-eyebrow-leading);
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--muted);
@@ -240,13 +366,23 @@ button.btn:hover {
   background: var(--void-2);
   padding: 0.75rem 0.9rem;
   color: var(--ink);
-  font-size: 0.95rem;
+  font-family: inherit;
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  letter-spacing: var(--type-body-tracking);
   line-height: 1.5;
 }
 
 .admin-input:focus {
   outline: 2px solid color-mix(in srgb, var(--lime) 70%, transparent);
   outline-offset: 1px;
+}
+
+@media (max-width: 639px) {
+  .wordmark {
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

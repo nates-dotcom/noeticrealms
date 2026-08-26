@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { siteNav } from "@/content/site-copy";
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 
 export function Header() {
   const pathname = usePathname();
@@ -38,7 +39,8 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "font-display text-[0.68rem] font-bold tracking-[0.22em] uppercase transition",
+                  typography.nav,
+                  "transition",
                   active ? "text-lime" : "text-muted hover:text-ink",
                 )}
               >
@@ -98,7 +100,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-chaos text-3xl tracking-wide"
+              className={typography.h3}
               onClick={() => setOpen(false)}
             >
               {link.label}

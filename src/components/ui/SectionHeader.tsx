@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 
 type SectionHeaderProps = {
   eyebrow?: string;
@@ -39,12 +40,12 @@ export function SectionHeader({
         className,
       )}
     >
-      {eyebrow ? <p className="eyebrow mb-4">{eyebrow}</p> : null}
-      <Heading className="font-chaos text-4xl sm:text-6xl" style={{ color: "var(--title)" }}>
+      {eyebrow ? <p className={`${typography.eyebrow} mb-4 text-lime`}>{eyebrow}</p> : null}
+      <Heading className={typography.h1} style={{ color: "var(--title)" }}>
         {highlighted}
       </Heading>
       {description ? (
-        <p className="lede mt-4 text-base leading-8 text-muted sm:text-lg">
+        <p className={`${typography.bodyLg} mt-4 text-muted`}>
           {description}
         </p>
       ) : null}

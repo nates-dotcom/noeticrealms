@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
+import { typography } from "@/lib/type";
 
 const variants = {
   primary: "btn",
@@ -36,7 +37,8 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-xl font-display font-bold tracking-[0.14em] uppercase transition duration-200 hover:-translate-y-0.5",
+    "inline-flex items-center justify-center gap-2 rounded-xl transition duration-200 hover:-translate-y-0.5",
+    typography.button,
     variants[variant],
     sizes[size],
     className,
