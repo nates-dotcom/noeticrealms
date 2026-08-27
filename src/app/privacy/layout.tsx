@@ -3,7 +3,7 @@ import { studio } from "@/content/studio";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `Privacy practices for ${studio.name} and Duel Me Bro.`,
+  description: `This Privacy Policy covers Duel Me Bro VR and the ${studio.name} studio website.`,
 };
 
 export default function PrivacyLayout({ children }: LayoutProps<"/privacy">) {
