@@ -371,6 +371,35 @@ button.btn:hover {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--lime) 45%, transparent), 0 0 40px rgba(255, 225, 74, 0.2);
 }
 
+.short-clip-play {
+  transition: background-color 220ms ease;
+}
+
+.short-clip-play-label {
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.short-clip-play:hover,
+.short-clip-play:focus-visible {
+  background: color-mix(in srgb, var(--void) 8%, transparent);
+}
+
+.short-clip-play:hover .short-clip-play-label,
+.short-clip-play:focus-visible .short-clip-play-label {
+  transform: scale(1.08);
+  color: var(--void);
+  background: var(--lime);
+  border-color: var(--lime);
+  box-shadow:
+    0 0 0 1px var(--lime),
+    0 0 22px rgba(255, 225, 74, 0.55);
+}
+
 .glow-magenta {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--magenta) 50%, transparent), 0 0 40px rgba(255, 58, 20, 0.22);
 }
@@ -419,5 +448,15 @@ button.btn:hover {
 
   .ticker-track {
     animation: none;
+  }
+
+  .short-clip-play,
+  .short-clip-play-label {
+    transition: none;
+  }
+
+  .short-clip-play:hover .short-clip-play-label,
+  .short-clip-play:focus-visible .short-clip-play-label {
+    transform: none;
   }
 }

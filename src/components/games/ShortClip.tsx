@@ -76,11 +76,11 @@ export function ShortClip({
         <button
           type="button"
           onClick={() => setClicked(true)}
-          className="absolute inset-0 z-10 flex items-center justify-center bg-void/25"
+          className="short-clip-play absolute inset-0 z-10 flex items-center justify-center bg-void/25"
           aria-label={`Play ${title}`}
         >
           <span
-            className={`${typography.button} rounded-full border border-lime bg-void/80 px-4 py-2 text-xs text-lime`}
+            className={`${typography.button} short-clip-play-label rounded-full border border-lime bg-void/80 px-4 py-2 text-xs text-lime`}
           >
             Play
           </span>
