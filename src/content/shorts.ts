@@ -23,6 +23,10 @@ export const duelShorts = [
     id: "jcP-fdk5YU0",
     title: "Duel Me Bro gameplay clip",
   },
+  {
+    id: "1_y0LEM2ZM4",
+    title: "Duel Me Bro gameplay clip",
+  },
 ] as const;
 
 export function youtubeShortUrl(id: string) {

@@ -19,6 +19,7 @@ const clipShift = [
   "sm:translate-y-12",
   "sm:translate-y-3",
   "sm:translate-y-9",
+  "sm:translate-y-5",
 ];
 
 export function GameView({
@@ -147,7 +148,7 @@ export function GameView({
               <div
                 key={clip.id}
                 className={cn(
-                  "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.9rem)] lg:w-[calc(20%-1rem)]",
+                  "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.9rem)] lg:w-[calc((100%-6.25rem)/6)]",
                   clipShift[index],
                 )}
               >
