@@ -19,28 +19,20 @@ export function Ticker({
   orientation?: "horizontal" | "vertical";
 }) {
   const loop = [...items, ...items];
-  const track = (
-    <div className="ticker-track">
-      {loop.map((item, index) => (
-        <span key={`${orientation}-${item}-${index}`} className="ticker-item">
-          <span className="ticker-dot" />
-          {item}
-        </span>
-      ))}
-    </div>
-  );
-
-  if (orientation === "vertical") {
-    return (
-      <div className="ticker ticker-vertical" aria-hidden="true">
-        <div className="ticker-rotator">{track}</div>
-      </div>
-    );
-  }
 
   return (
-    <div className="ticker" aria-hidden="true">
-      {track}
+    <div
+      className={orientation === "vertical" ? "ticker ticker-vertical" : "ticker"}
+      aria-hidden="true"
+    >
+      <div className="ticker-track">
+        {loop.map((item, index) => (
+          <span key={`${orientation}-${item}-${index}`} className="ticker-item">
+            <span className="ticker-dot" />
+            {item}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

@@ -315,8 +315,6 @@ button.btn:hover {
 }
 
 .ticker-vertical {
-  position: relative;
-  display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -324,16 +322,19 @@ button.btn:hover {
   border-inline-end: 1px solid var(--line);
 }
 
-.ticker-rotator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  overflow: hidden;
-  width: calc(100svh - var(--header-h));
-  height: 2.85rem;
-  transform: rotate(-90deg) translateX(-100%);
-  transform-origin: 0 0;
+.ticker-vertical .ticker-track {
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  animation-name: ticker-scroll-y;
+  animation-duration: 36s;
+}
+
+.ticker-vertical .ticker-item {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  gap: 0.85rem;
+  padding: 1.35rem 0.45rem;
 }
 
 .ticker-dot {
@@ -411,6 +412,15 @@ button.btn:hover {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes ticker-scroll-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
   }
 }
 
