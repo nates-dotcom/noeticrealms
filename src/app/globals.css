@@ -315,8 +315,9 @@ button.btn:hover {
 }
 
 .ticker-vertical {
-  width: 2.85rem;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
   border-block: 0;
   border-inline-end: 1px solid var(--line);
 }
@@ -324,6 +325,7 @@ button.btn:hover {
 .ticker-vertical .ticker-track {
   flex-direction: column;
   width: 100%;
+  height: max-content;
   animation-name: ticker-scroll-y;
   animation-duration: 36s;
 }
