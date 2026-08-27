@@ -35,13 +35,7 @@ export function GameView({
   const moreClips = duelShorts.slice(1);
 
   return (
-    <div className="relative lg:pl-[2.85rem]">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden lg:block">
-        <div className="sticky top-[var(--header-h)] h-[calc(100svh-var(--header-h))]">
-          <Ticker orientation="vertical" />
-        </div>
-      </div>
-
+    <>
       <section className="relative overflow-hidden border-b border-line">
         <div className="absolute inset-0">
           <Image
@@ -179,6 +173,6 @@ export function GameView({
           </div>
         </Container>
       </section>
-    </div>
+    </>
   );
 }
