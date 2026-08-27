@@ -379,25 +379,25 @@ button.btn:hover {
   transition:
     transform 220ms ease,
     background-color 220ms ease,
+    color 220ms ease,
     box-shadow 220ms ease,
-    filter 220ms ease;
+    border-color 220ms ease;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .short-clip-play:hover,
-  .short-clip-play:focus-visible {
-    background: color-mix(in srgb, var(--void) 12%, transparent);
-  }
+.short-clip-play:hover,
+.short-clip-play:focus-visible {
+  background: color-mix(in srgb, var(--void) 8%, transparent);
+}
 
-  .short-clip-play:hover .short-clip-play-label,
-  .short-clip-play:focus-visible .short-clip-play-label {
-    transform: scale(1.07);
-    background: color-mix(in srgb, var(--lime) 22%, var(--void));
-    box-shadow:
-      0 0 0 1px color-mix(in srgb, var(--lime) 65%, transparent),
-      0 0 18px rgba(255, 225, 74, 0.42);
-    filter: brightness(1.12);
-  }
+.short-clip-play:hover .short-clip-play-label,
+.short-clip-play:focus-visible .short-clip-play-label {
+  transform: scale(1.08);
+  color: var(--void);
+  background: var(--lime);
+  border-color: var(--lime);
+  box-shadow:
+    0 0 0 1px var(--lime),
+    0 0 22px rgba(255, 225, 74, 0.55);
 }
 
 .glow-magenta {
