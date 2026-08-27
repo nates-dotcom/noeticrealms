@@ -392,6 +392,31 @@ function AdminEditor({ onLogout }: { onLogout: () => void }) {
                 }
               />
             ))}
+            {section.items?.map((item, itemEntryIndex) => (
+              <TextArea
+                key={`privacy-${index}-item-${itemEntryIndex}`}
+                label={`Section ${index + 1} list item ${itemEntryIndex + 1}`}
+                value={item}
+                onChange={(value) =>
+                  setDraft({
+                    ...draft,
+                    privacy: {
+                      ...draft.privacy,
+                      sections: draft.privacy.sections.map((entry, itemIndex) =>
+                        itemIndex === index
+                          ? {
+                              ...entry,
+                              items: entry.items?.map((listItem, listIndex) =>
+                                listIndex === itemEntryIndex ? value : listItem,
+                              ),
+                            }
+                          : entry,
+                      ),
+                    },
+                  })
+                }
+              />
+            ))}
           </div>
         ))}
       </Section>

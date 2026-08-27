@@ -11,6 +11,7 @@ export type CopyStat = {
 export type CopySection = {
   title: string;
   body: string[];
+  items?: string[];
 };
 
 export type SiteCopy = {
@@ -207,38 +208,66 @@ export const defaultSiteCopy: SiteCopy = {
   privacy: {
     eyebrow: "Legal",
     title: "Privacy Policy",
-    description: "This policy covers Duel Me Bro and the Noetic Realms studio website.",
+    description:
+      "This Privacy Policy covers Duel Me Bro VR and the Noetic Realms studio website.",
     updated: "Last updated August 2026.",
     sections: [
       {
-        title: "We do not collect your data",
+        title: "What data do we collect and for what purpose?",
         body: [
-          "Neither Duel Me Bro nor Noetic Realms collect, transmit, distribute, or sell your data. The game uses no third-party analytics or advertising services. No email, name, address, or any other personal information is requested or required to play.",
+          "The data we process and/or collect from and about Users varies depending on what is required for the Game and the Services. Where we collect and use personal data, we do so only where we have a lawful reason to use that data for a particular purpose.",
         ],
       },
       {
-        title: "Meta Quest platform",
+        title: "Data Processed to Provide Meta Platform Features",
         body: [
-          "Duel Me Bro is listed on the Meta Store as coming soon, with Users Interact and in-game purchases. When you play on Meta Quest, Meta may access platform account details shown on the store page, including your display name, username, user id, profile pictures, avatars, age group, and a list of followers and people you follow who also own the app. That is Meta platform identity for multiplayer, not data Noetic Realms collects, sells, or uses for ads.",
+          "Certain Meta platform features, when enabled, automatically processes data of users and their devices. The Game processes the following data to facilitate the operation of specific Meta Platform Features and associated services and is not stored by Noetic:",
+        ],
+        items: [
+          "Achievements: User ID and User Profile are processed to allocate achievements to a user's account;",
+          "Leaderboards: User ID, User Profile and Friends List are processed to display a user's profile on the global leaderboard and to enable filtering of the leaderboard for friends;",
+          "In-Game Purchases and DLC: User ID and User Profile are processed to allocate additional Game content (including DLC and pre-order bonus content) to a user's account;",
         ],
       },
       {
-        title: "What stays on your device",
+        title: "Meta Quest Platform",
         body: [
-          "Storage permission on the device where the application is installed is requested in order to store save data such as high scores and settings preferences. This save data is entirely local to your device and is never transmitted or accessed remotely.",
-          "If you wish to delete your data, simply uninstall the game.",
+          "Duel Me Bro VR uses certain Meta platform features to provide functionality such as achievements, leaderboards, social features, and in-game purchases. Data processed through these features is handled as described above and is not stored by Noetic Realms.",
+          "Meta may separately collect and process information associated with your Meta account, device, and use of the Meta Quest platform in accordance with Meta's own terms and privacy policies. Noetic Realms does not sell Meta platform data or use it for advertising.",
         ],
       },
       {
-        title: "If you email us",
+        title: "What Stays on Your Device",
         body: [
-          "If you email the developer for support or other feedback, emails and email addresses will be retained for quality assurance purposes. Those addresses will be used only to reply to the concerns or suggestions raised and will never be used for any marketing purpose.",
+          "Storage on the device where the application is installed may be used to store local game data such as settings, preferences, and other save data. This locally stored data is not transmitted to or remotely accessed by Noetic Realms.",
+          "You may remove locally stored game data by uninstalling the game or by using any applicable data-management features provided by your device or the Meta Quest platform.",
+        ],
+      },
+      {
+        title: "Third-Party Analytics and Advertising",
+        body: [
+          "Duel Me Bro VR does not use third-party analytics or advertising services. Noetic Realms does not sell your personal information or use personal information collected through the Game for advertising.",
+        ],
+      },
+      {
+        title: "If You Email Us",
+        body: [
+          "If you email the developer for support or other feedback, your email, email address, and any information you voluntarily include in your message may be retained for support and quality assurance purposes.",
+          "This information will be used only to respond to your questions, concerns, feedback, or support requests and will not be used for marketing purposes.",
+        ],
+      },
+      {
+        title: "Data Deletion",
+        body: [
+          "Data stored locally by Duel Me Bro VR can be removed by uninstalling the Game or by using applicable device or platform data-management features.",
+          "Data associated with Meta platform services, such as achievements, leaderboards, purchases, or your Meta account, may be controlled or retained by Meta in accordance with Meta's policies and platform functionality.",
+          "Noetic Realms does not maintain a separate database containing the Meta platform data described above.",
         ],
       },
       {
         title: "Questions",
         body: [
-          "If you have any questions concerning this policy or our privacy practices, you can email the developer at duelmebro@noeticrealms.com.",
+          "If you have any questions concerning this Privacy Policy or our privacy practices, you can email the developer at duelmebro@noeticrealms.com.",
         ],
       },
     ],
