@@ -204,6 +204,7 @@ function AdminEditor({ onLogout }: { onLogout: () => void }) {
         <div className="grid gap-5 sm:grid-cols-2">
           <TextField label="Title" value={draft.game.title} onChange={(title) => setDraft({ ...draft, game: { ...draft.game, title } })} />
           <TextField label="Status label" value={draft.game.statusLabel} onChange={(statusLabel) => setDraft({ ...draft, game: { ...draft.game, statusLabel } })} />
+          <TextField label="Price" value={draft.game.price} onChange={(price) => setDraft({ ...draft, game: { ...draft.game, price } })} />
           <TextField label="Wordmark line 1" value={draft.game.wordmarkLine1} onChange={(wordmarkLine1) => setDraft({ ...draft, game: { ...draft.game, wordmarkLine1 } })} />
           <TextField label="Wordmark line 2" value={draft.game.wordmarkLine2} onChange={(wordmarkLine2) => setDraft({ ...draft, game: { ...draft.game, wordmarkLine2 } })} />
           <TextField label="VR mark" value={draft.game.vrMark} onChange={(vrMark) => setDraft({ ...draft, game: { ...draft.game, vrMark } })} />
@@ -255,7 +256,7 @@ function AdminEditor({ onLogout }: { onLogout: () => void }) {
           <TextField label="Platforms line" value={draft.studio.platformsLine} onChange={(platformsLine) => setDraft({ ...draft, studio: { ...draft.studio, platformsLine } })} />
           <TextField label="Email" value={draft.studio.email} onChange={(email) => setDraft({ ...draft, studio: { ...draft.studio, email } })} />
           <TextField label="Meta Store URL" value={draft.studio.wishlistUrl} onChange={(wishlistUrl) => setDraft({ ...draft, studio: { ...draft.studio, wishlistUrl } })} />
-          <TextField label="Wishlist button" value={draft.studio.wishlistLabel} onChange={(wishlistLabel) => setDraft({ ...draft, studio: { ...draft.studio, wishlistLabel } })} />
+          <TextField label="Store button" value={draft.studio.wishlistLabel} onChange={(wishlistLabel) => setDraft({ ...draft, studio: { ...draft.studio, wishlistLabel } })} />
           <TextField label="Discord URL" value={draft.studio.discordUrl} onChange={(discordUrl) => setDraft({ ...draft, studio: { ...draft.studio, discordUrl } })} />
           <TextField label="Discord button" value={draft.studio.discordLabel} onChange={(discordLabel) => setDraft({ ...draft, studio: { ...draft.studio, discordLabel } })} />
           <TextField label="YouTube URL" value={draft.studio.youtubeUrl} onChange={(youtubeUrl) => setDraft({ ...draft, studio: { ...draft.studio, youtubeUrl } })} />

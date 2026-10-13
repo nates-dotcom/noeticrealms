@@ -50,7 +50,9 @@ export default function AboutPage() {
 
       <div className="mt-12 flex flex-wrap gap-4">
         <Button href={copy.studio.wishlistUrl} external>
-          {copy.about.ctaLabel}
+          {copy.game.price
+            ? `${copy.about.ctaLabel} · ${copy.game.price}`
+            : copy.about.ctaLabel}
         </Button>
         <Button href={copy.studio.discordUrl} external variant="secondary">
           Join {copy.studio.discordLabel}

@@ -35,7 +35,7 @@ export function GameCard({ game, featured = false }: { game: Game; featured?: bo
           </h3>
           <p className={`${typography.small} mt-2 text-muted`}>{game.tagline}</p>
           <p className={`${typography.eyebrow} mt-4 text-cyan`}>
-            {game.platforms.join(" · ")}
+            {[...game.platforms, game.price].filter(Boolean).join(" · ")}
           </p>
         </div>
       </Card>

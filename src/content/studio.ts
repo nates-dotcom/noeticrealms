@@ -2,7 +2,7 @@ export const studio = {
   name: "Noetic Realms",
   tagline: "Indie VR with a peel.",
   description:
-    "Noetic Realms is an independent studio building a-peel-ing VR for Meta Quest, starting with Duel Me Bro — a coming-soon shooter, fighter, and party game.",
+    "Noetic Realms is an independent studio building a-peel-ing VR for Meta Quest, starting with Duel Me Bro — a shooter, fighter, and party game out now.",
   about:
     "We make VR games that feel alive in the headset and loud on a stream. Competitive. Chaotic. Built for players who want to move, talk trash, slip, and remember the round.",
   platformsLine: "Meta Quest",
