@@ -1,5 +1,6 @@
 const items = [
-  "Coming soon",
+  "Out now",
+  "$5.99",
   "1v1",
   "2v2",
   "Bananas",

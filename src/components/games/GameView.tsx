@@ -54,6 +54,7 @@ export function GameView({
               <div className="flex flex-wrap gap-2.5">
                 <Badge>{game.statusLabel}</Badge>
                 <Badge tone="cyan">{game.platforms}</Badge>
+                {game.price ? <Badge tone="magenta">{game.price}</Badge> : null}
               </div>
               <Badge tone="magenta">{game.genres}</Badge>
             </div>
@@ -70,7 +71,9 @@ export function GameView({
             </p>
             <div className="mt-8">
               <Button href={copy.studio.wishlistUrl} external>
-                {copy.studio.wishlistLabel}
+                {game.price
+                  ? `${copy.studio.wishlistLabel} · ${game.price}`
+                  : copy.studio.wishlistLabel}
               </Button>
             </div>
           </div>

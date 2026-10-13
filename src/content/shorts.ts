@@ -1,31 +1,31 @@
 export const duelShorts = [
   {
-    id: "YbkP768zYKI",
-    title: "Duel Me Bro gameplay clip",
+    id: "LFxPolg8ZA0",
+    title: "Maybe we shouldn't have added Russian roulette to our game 😅",
   },
   {
-    id: "42glwO7itIs",
-    title: "Duel Me Bro gameplay clip",
+    id: "QyyZs_x014Q",
+    title: "Have you hopped in yet?",
   },
   {
-    id: "VO_zSgkA8yU",
-    title: "Duel Me Bro gameplay clip",
+    id: "PmBu9WdYOFk",
+    title: "Months of work, and it's finally yours to play. Let us know what you think 🙌",
   },
   {
-    id: "3A2R-SXLfbg",
-    title: "Duel Me Bro gameplay clip",
+    id: "I_BmOXwf-88",
+    title: "Duel Me Bro launches in early access tomorrow, wishlist it before it drops 🎉",
   },
   {
-    id: "o81UaDcxgYw",
-    title: "Duel Me Bro gameplay clip",
+    id: "S2ICuK5WvUM",
+    title: "3 days until Duel Me Bro launches in early access, wishlist now so you don't miss it!!",
   },
   {
-    id: "jcP-fdk5YU0",
-    title: "Duel Me Bro gameplay clip",
+    id: "57v7gP-MkQU",
+    title: "Only a couple more sleeps before our first VR game releases 🔥",
   },
   {
-    id: "1_y0LEM2ZM4",
-    title: "Duel Me Bro gameplay clip",
+    id: "xLrM3vLzA3I",
+    title: "One week left!!! Help us spread the word before launch 🔥",
   },
 ] as const;
 
