@@ -139,6 +139,21 @@ button.btn:hover {
   box-shadow: 8px 8px 0 0 var(--lime);
 }
 
+a.btn-secondary,
+button.btn-secondary {
+  background: transparent;
+  color: var(--lime);
+  border: 1px solid color-mix(in srgb, var(--lime) 75%, transparent);
+  box-shadow: 6px 6px 0 0 var(--magenta);
+}
+
+a.btn-secondary:hover,
+button.btn-secondary:hover {
+  background: var(--lime);
+  color: #111;
+  box-shadow: 8px 8px 0 0 var(--magenta);
+}
+
 /* -------------------------------------------------------------------------- */
 /* Typography tokens                                                           */
 /* -------------------------------------------------------------------------- */

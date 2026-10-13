@@ -15,6 +15,7 @@ export type GameTrailer = {
   poster: string;
   hd: string;
   sd: string;
+  full: string;
 };
 
 export type Game = {
@@ -53,6 +54,7 @@ export const games: Game[] = [
       poster: "/media/games/duel-me-bro/trailer-poster.jpg",
       hd: "/media/games/duel-me-bro/trailer-1080.mp4",
       sd: "/media/games/duel-me-bro/trailer-720.mp4",
+      full: "/media/games/duel-me-bro/trailer-full-1080.mp4",
     },
     gallery: [
       {

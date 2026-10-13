@@ -1,13 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import type { GameTrailer } from "@/content/games";
 
-export function HeroTrailer({ poster, hd, sd }: GameTrailer) {
+export function HeroTrailer({
+  poster,
+  hd,
+  sd,
+  paused = false,
+}: Omit<GameTrailer, "full"> & { paused?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
@@ -15,18 +20,19 @@ export function HeroTrailer({ poster, hd, sd }: GameTrailer) {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const sync = () => {
-      if (media.matches) {
+      if (paused || media.matches) {
         video.pause();
-        video.autoplay = false;
+        if (media.matches) video.autoplay = false;
         return;
       }
+      video.autoplay = true;
       void video.play().catch(() => {});
     };
 
     sync();
     media.addEventListener("change", sync);
     return () => media.removeEventListener("change", sync);
-  }, []);
+  }, [paused]);
 
   return (
     <>

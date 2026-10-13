@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
 import { HeroTrailer } from "@/components/games/HeroTrailer";
 import { ShortClip } from "@/components/games/ShortClip";
+import { TrailerModal, type TrailerModalHandle } from "@/components/games/TrailerModal";
 import { Ticker } from "@/components/home/Ticker";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -37,13 +40,27 @@ export function GameView({
   const game = copy.game;
   const featured = duelShorts[0];
   const moreClips = duelShorts.slice(1);
+  const inlineTrailerRef = useRef<HTMLVideoElement>(null);
+  const modalRef = useRef<TrailerModalHandle>(null);
+  const [trailerOpen, setTrailerOpen] = useState(false);
+
+  function openTrailer() {
+    inlineTrailerRef.current?.pause();
+    flushSync(() => setTrailerOpen(true));
+    modalRef.current?.play();
+  }
 
   return (
     <>
       <section className="relative overflow-hidden border-b border-line">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           {trailer ? (
-            <HeroTrailer poster={trailer.poster} hd={trailer.hd} sd={trailer.sd} />
+            <HeroTrailer
+              poster={trailer.poster}
+              hd={trailer.hd}
+              sd={trailer.sd}
+              paused={trailerOpen}
+            />
           ) : (
             <Image
               src={hero}
@@ -83,12 +100,17 @@ export function GameView({
             <p className="lede mt-8 max-w-xl text-muted">
               {game.summary}
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button href={copy.studio.wishlistUrl} external>
                 {game.price
                   ? `${copy.studio.wishlistLabel} · ${game.price}`
                   : copy.studio.wishlistLabel}
               </Button>
+              {trailer ? (
+                <Button variant="secondary" onClick={openTrailer}>
+                  Watch trailer
+                </Button>
+              ) : null}
             </div>
           </div>
           <div className="frame glow-lime relative mx-auto aspect-[716/1024] w-full max-w-md overflow-hidden rounded-[1.5rem] lg:max-w-none">
@@ -107,6 +129,26 @@ export function GameView({
       <div className="lg:hidden">
         <Ticker />
       </div>
+
+      {trailer ? (
+        <section aria-label="Trailer">
+          <Container className="py-16 sm:py-24">
+            <SectionHeader title="Trailer" />
+            <div className="frame mt-10 overflow-hidden rounded-[1.35rem]">
+              <video
+                ref={inlineTrailerRef}
+                className="aspect-video w-full bg-black"
+                controls
+                preload="none"
+                poster={trailer.poster}
+                src={trailer.full}
+                playsInline
+                aria-label={`${game.title} trailer`}
+              />
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
       <Container as="section" className="py-16 sm:py-24">
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(15rem,0.72fr)] lg:gap-16">
@@ -190,6 +232,16 @@ export function GameView({
           </div>
         </Container>
       </section>
+      {trailer ? (
+        <TrailerModal
+          ref={modalRef}
+          open={trailerOpen}
+          src={trailer.full}
+          poster={trailer.poster}
+          title={game.title}
+          onClose={() => setTrailerOpen(false)}
+        />
+      ) : null}
     </>
   );
 }

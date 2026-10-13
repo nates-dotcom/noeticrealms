@@ -4,7 +4,7 @@ import { typography } from "@/lib/type";
 
 const variants = {
   primary: "btn",
-  secondary: "btn",
+  secondary: "btn-secondary",
   magenta: "btn",
   ghost: "bg-transparent text-ink hover:text-lime",
 };
@@ -43,7 +43,8 @@ export function Button({
     sizes[size],
     className,
   );
-  const labelStyle = variant === "ghost" ? undefined : { color: "#fff" };
+  const labelStyle =
+    variant === "primary" || variant === "magenta" ? { color: "#fff" } : undefined;
 
   if (href) {
     const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
