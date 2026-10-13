@@ -37,7 +37,7 @@ export const games: Game[] = [
     title: "Duel Me Bro",
     shortName: "Duel Me Bro",
     tagline: "Choose your weapon. Bruise your opponent.",
-    status: "released",
+    status: "early-access",
     price: "$5.99",
     platforms: ["Meta Quest"],
     cover: "/media/games/duel-me-bro/poster.png",
@@ -72,7 +72,7 @@ export const games: Game[] = [
     summary:
       "A chaotic shooter, fighter, and party game for Meta Quest. Cartoon bananas pick a weapon, step in, and settle beef with their actual arms. 1v1 or 2v2. Slip once and the whole bunch is talking.",
     description: [
-      "Duel Me Bro is out now on Meta Quest for $5.99: a party shooter-fighter where you step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
+      "Duel Me Bro is out now in Early Access on Meta Quest for $5.99: a party shooter-fighter where you step into banana bodies, choose your weapon, and settle it in a short, loud VR fight. Queue a 1v1 if it is personal, or run 2v2 when the whole squad wants in. Everybody is going to talk trash. Somebody is going to slip.",
       "It is competitive without being sterile and cartoon without being cute. Headset on, loadout locked, rematch queued. The bragging rights travel wherever you take them, and the look is extremely a-peel-ing.",
     ],
     features: [
@@ -122,6 +122,6 @@ export function getFeaturedGame() {
 
 export const statusCopy: Record<GameStatus, string> = {
   upcoming: "Coming soon",
-  "early-access": "Early Access",
+  "early-access": "Out now · Early Access",
   released: "Out now",
 };

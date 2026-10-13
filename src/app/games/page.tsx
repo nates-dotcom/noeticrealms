@@ -7,7 +7,7 @@ import { games } from "@/content/games";
 export const metadata: Metadata = {
   title: "Games",
   description:
-    "VR games from Noetic Realms, led by Duel Me Bro — a shooter, fighter, and party game out now on Meta Quest.",
+    "VR games from Noetic Realms, led by Duel Me Bro — out now in Early Access on Meta Quest.",
 };
 
 export default function GamesPage() {
@@ -18,7 +18,7 @@ export default function GamesPage() {
         eyebrow="The lineup"
         title="Games from the realm"
         highlight="realm"
-        description="Duel Me Bro leads the lineup. Out now on Meta Quest. Every new title gets its own page, gallery, and feature set as it is ready to show."
+        description="Duel Me Bro leads the lineup. Out now in Early Access on Meta Quest. Every new title gets its own page, gallery, and feature set as it is ready to show."
       />
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {games.map((game) => (
