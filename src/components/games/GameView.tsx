@@ -1,14 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { useSiteCopy } from "@/components/content/SiteCopyProvider";
+import { HeroTrailer } from "@/components/games/HeroTrailer";
 import { ShortClip } from "@/components/games/ShortClip";
+import { TrailerModal, type TrailerModalHandle } from "@/components/games/TrailerModal";
 import { Ticker } from "@/components/home/Ticker";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import type { GameTrailer } from "@/content/games";
 import { duelShorts } from "@/content/shorts";
 import { cn } from "@/lib/cn";
 import { typography } from "@/lib/type";
@@ -25,30 +30,54 @@ const clipShift = [
 export function GameView({
   cover,
   hero,
+  trailer,
 }: {
   cover: string;
   hero: string;
+  trailer?: GameTrailer;
 }) {
   const { copy } = useSiteCopy();
   const game = copy.game;
   const featured = duelShorts[0];
   const moreClips = duelShorts.slice(1);
+  const modalRef = useRef<TrailerModalHandle>(null);
+  const [trailerOpen, setTrailerOpen] = useState(false);
+
+  function openTrailer() {
+    flushSync(() => setTrailerOpen(true));
+    modalRef.current?.play();
+  }
 
   return (
     <>
       <section className="relative overflow-hidden border-b border-line">
-        <div className="absolute inset-0">
-          <Image
-            src={hero}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-40"
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          {trailer ? (
+            <HeroTrailer
+              poster={trailer.poster}
+              hd={trailer.hd}
+              sd={trailer.sd}
+              paused={trailerOpen}
+            />
+          ) : (
+            <Image
+              src={hero}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover opacity-40"
+            />
+          )}
+          <div
+            className={
+              trailer
+                ? "hero-scrim absolute inset-0"
+                : "absolute inset-0 bg-gradient-to-b from-void/70 via-void/80 to-void"
+            }
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-void/70 via-void/80 to-void" />
         </div>
-        <Container className="relative grid items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+        <Container className="relative z-10 grid items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
             <div className="relative z-20 flex flex-col items-start gap-2.5">
               <div className="flex flex-wrap gap-2.5">
@@ -69,12 +98,17 @@ export function GameView({
             <p className="lede mt-8 max-w-xl text-muted">
               {game.summary}
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button href={copy.studio.wishlistUrl} external>
                 {game.price
                   ? `${copy.studio.wishlistLabel} · ${game.price}`
                   : copy.studio.wishlistLabel}
               </Button>
+              {trailer ? (
+                <Button variant="secondary" onClick={openTrailer}>
+                  Watch trailer
+                </Button>
+              ) : null}
             </div>
           </div>
           <div className="frame glow-lime relative mx-auto aspect-[716/1024] w-full max-w-md overflow-hidden rounded-[1.5rem] lg:max-w-none">
@@ -176,6 +210,16 @@ export function GameView({
           </div>
         </Container>
       </section>
+      {trailer ? (
+        <TrailerModal
+          ref={modalRef}
+          open={trailerOpen}
+          src={trailer.full}
+          poster={trailer.poster}
+          title={game.title}
+          onClose={() => setTrailerOpen(false)}
+        />
+      ) : null}
     </>
   );
 }
