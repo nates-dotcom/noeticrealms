@@ -40,12 +40,10 @@ export function GameView({
   const game = copy.game;
   const featured = duelShorts[0];
   const moreClips = duelShorts.slice(1);
-  const inlineTrailerRef = useRef<HTMLVideoElement>(null);
   const modalRef = useRef<TrailerModalHandle>(null);
   const [trailerOpen, setTrailerOpen] = useState(false);
 
   function openTrailer() {
-    inlineTrailerRef.current?.pause();
     flushSync(() => setTrailerOpen(true));
     modalRef.current?.play();
   }
@@ -129,26 +127,6 @@ export function GameView({
       <div className="lg:hidden">
         <Ticker />
       </div>
-
-      {trailer ? (
-        <section aria-label="Trailer">
-          <Container className="py-16 sm:py-24">
-            <SectionHeader title="Trailer" />
-            <div className="frame mt-10 overflow-hidden rounded-[1.35rem]">
-              <video
-                ref={inlineTrailerRef}
-                className="aspect-video w-full bg-black"
-                controls
-                preload="none"
-                poster={trailer.poster}
-                src={trailer.full}
-                playsInline
-                aria-label={`${game.title} trailer`}
-              />
-            </div>
-          </Container>
-        </section>
-      ) : null}
 
       <Container as="section" className="py-16 sm:py-24">
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(15rem,0.72fr)] lg:gap-16">
