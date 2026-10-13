@@ -32,5 +32,7 @@ export default async function GamePage({ params }: PageProps<"/games/[slug]">) {
   const game = getGame(slug);
   if (!game) notFound();
 
-  return <GameView cover={game.cover} hero={game.hero} />;
+  return (
+    <GameView cover={game.cover} hero={game.hero} trailer={game.trailer} />
+  );
 }

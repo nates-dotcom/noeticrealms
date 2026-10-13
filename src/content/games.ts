@@ -11,6 +11,12 @@ export type GameFeature = {
   body: string;
 };
 
+export type GameTrailer = {
+  poster: string;
+  hd: string;
+  sd: string;
+};
+
 export type Game = {
   slug: string;
   title: string;
@@ -20,6 +26,7 @@ export type Game = {
   platforms: string[];
   cover: string;
   hero: string;
+  trailer?: GameTrailer;
   gallery: GameMedia[];
   summary: string;
   description: string[];
@@ -42,6 +49,11 @@ export const games: Game[] = [
     platforms: ["Meta Quest"],
     cover: "/media/games/duel-me-bro/poster.png",
     hero: "/media/games/duel-me-bro/banner-wide.png",
+    trailer: {
+      poster: "/media/games/duel-me-bro/trailer-poster.jpg",
+      hd: "/media/games/duel-me-bro/trailer-1080.mp4",
+      sd: "/media/games/duel-me-bro/trailer-720.mp4",
+    },
     gallery: [
       {
         src: "/media/games/duel-me-bro/poster.png",
