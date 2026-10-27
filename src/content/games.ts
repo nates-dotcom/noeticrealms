@@ -27,6 +27,8 @@ export type Game = {
   platforms: string[];
   cover: string;
   hero: string;
+  heroWidth: number;
+  heroHeight: number;
   trailer?: GameTrailer;
   gallery: GameMedia[];
   summary: string;
@@ -48,8 +50,10 @@ export const games: Game[] = [
     status: "early-access",
     price: "$5.99",
     platforms: ["Meta Quest"],
-    cover: "/media/games/duel-me-bro/poster.png",
-    hero: "/media/games/duel-me-bro/banner-wide.png",
+    cover: "/media/games/duel-me-bro/poster.webp",
+    hero: "/media/games/duel-me-bro/cover-landscape.webp",
+    heroWidth: 2560,
+    heroHeight: 1440,
     trailer: {
       poster: "/media/games/duel-me-bro/trailer-poster.jpg",
       hd: "/media/games/duel-me-bro/trailer-1080.mp4",
@@ -58,29 +62,34 @@ export const games: Game[] = [
     },
     gallery: [
       {
-        src: "/media/games/duel-me-bro/poster.png",
-        alt: "Duel Me Bro poster with two banana duelists, pistols versus katanas",
-        caption: "Poster",
+        src: "/media/games/duel-me-bro/cover-square.webp",
+        alt: "Duel Me Bro store cover: a banana duelist in pixel sunglasses holding a flintlock pistol",
+        caption: "Store cover",
       },
       {
-        src: "/media/games/duel-me-bro/banner-wide.png",
-        alt: "Wide Duel Me Bro banner with banana fighters and comic speed lines",
-        caption: "Banner",
+        src: "/media/games/duel-me-bro/screenshot-1.webp",
+        alt: "Two banana duelists clash with katanas in a torchlit stone arena",
+        caption: "Katana clash",
       },
       {
-        src: "/media/games/duel-me-bro/key-art-duel.png",
-        alt: "Banana in a VR headset firing flintlocks at a banana with katanas",
-        caption: "Lock in a weapon",
+        src: "/media/games/duel-me-bro/screenshot-2.webp",
+        alt: "Banana duelists face off with flintlock pistols on a moonlit dock",
+        caption: "Pistols on the dock",
       },
       {
-        src: "/media/games/duel-me-bro/key-art-clash.png",
-        alt: "Banana duelists clashing pistols and katanas",
-        caption: "Clash",
+        src: "/media/games/duel-me-bro/screenshot-3.webp",
+        alt: "Weapon select showing a flintlock pistol, a katana, and a revolver",
+        caption: "Pick your weapon",
       },
       {
-        src: "/media/games/duel-me-bro/key-art-back-to-back.png",
-        alt: "Two bananas back to back in VR headsets, pistols drawn",
-        caption: "Back to back",
+        src: "/media/games/duel-me-bro/screenshot-4.webp",
+        alt: "Pre-match lobby with player banners and a weapon pedestal",
+        caption: "The lobby",
+      },
+      {
+        src: "/media/games/duel-me-bro/screenshot-5.webp",
+        alt: "Match lobby with both duelists ready beside a preview of the arena",
+        caption: "Ready up",
       },
     ],
     summary:

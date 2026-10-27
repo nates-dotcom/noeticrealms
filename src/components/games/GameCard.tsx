@@ -16,7 +16,7 @@ export function GameCard({ game, featured = false }: { game: Game; featured?: bo
           featured && "border-lime/35",
         )}
       >
-        <div className="relative aspect-[716/1024] overflow-hidden">
+        <div className="relative aspect-[7/10] overflow-hidden">
           <Image
             src={game.cover}
             alt={`${game.title} cover art`}

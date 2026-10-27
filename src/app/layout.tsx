@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Lilita_One, Manrope, Orbitron } from "next/font/google";
 import { SiteCopyProvider } from "@/components/content/SiteCopyProvider";
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { getFeaturedGame } from "@/content/games";
 import { studio } from "@/content/studio";
 import { readSiteCopy } from "@/lib/site-copy-store";
 import "./globals.css";
@@ -29,6 +30,8 @@ const lilita = Lilita_One({
   display: "swap",
 });
 
+const featured = getFeaturedGame();
+
 export const metadata: Metadata = {
   metadataBase: new URL(studio.siteUrl),
   title: {
@@ -44,10 +47,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/media/games/duel-me-bro/poster.png",
-        width: 1920,
-        height: 1080,
-        alt: "Duel Me Bro",
+        url: featured.hero,
+        width: featured.heroWidth,
+        height: featured.heroHeight,
+        alt: `${featured.title} cover art`,
+        type: "image/webp",
       },
     ],
   },
