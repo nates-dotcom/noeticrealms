@@ -111,7 +111,7 @@ export function GameView({
               ) : null}
             </div>
           </div>
-          <div className="frame glow-lime relative mx-auto aspect-[716/1024] w-full max-w-md overflow-hidden rounded-[1.5rem] lg:max-w-none">
+          <div className="frame glow-lime relative mx-auto aspect-[7/10] w-full max-w-md overflow-hidden rounded-[1.5rem] lg:max-w-none">
             <Image
               src={cover}
               alt={`${game.title} cover art`}

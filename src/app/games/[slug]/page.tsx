@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GameView } from "@/components/games/GameView";
 import { games, getGame } from "@/content/games";
+import { studio } from "@/content/studio";
 import { readSiteCopy } from "@/lib/site-copy-store";
 
 export const dynamic = "force-dynamic";
@@ -22,7 +23,20 @@ export async function generateMetadata({
     title: copy.game.title,
     description: copy.game.summary,
     openGraph: {
-      images: [{ url: game.cover, alt: copy.game.title }],
+      title: copy.game.title,
+      description: copy.game.summary,
+      url: `/games/${game.slug}`,
+      siteName: studio.name,
+      type: "website",
+      images: [
+        {
+          url: game.hero,
+          width: game.heroWidth,
+          height: game.heroHeight,
+          alt: `${copy.game.title} cover art`,
+          type: "image/webp",
+        },
+      ],
     },
   };
 }

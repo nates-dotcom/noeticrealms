@@ -51,7 +51,7 @@ export function MediaGallery({ items, className }: MediaGalleryProps) {
             className={cn(
               "group frame relative overflow-hidden rounded-[var(--radius)] text-left",
               index === 0
-                ? "aspect-[716/1024] sm:col-span-2 lg:row-span-2"
+                ? "aspect-square sm:col-span-2 lg:row-span-2"
                 : "aspect-[16/9]",
             )}
           >

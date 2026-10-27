@@ -12,20 +12,20 @@ export const duelShorts = [
     title: "Months of work, and it's finally yours to play. Let us know what you think 🙌",
   },
   {
-    id: "I_BmOXwf-88",
-    title: "Duel Me Bro launches in early access tomorrow, wishlist it before it drops 🎉",
+    id: "z34PQ-PwoCc",
+    title: "Who needs bullets when you've got a katana? ⚔️",
   },
   {
-    id: "S2ICuK5WvUM",
-    title: "3 days until Duel Me Bro launches in early access, wishlist now so you don't miss it!!",
+    id: "M7hHwDt_ZYE",
+    title: "Think you can beat the person who made the game? 🤠🔫",
   },
   {
-    id: "57v7gP-MkQU",
-    title: "Only a couple more sleeps before our first VR game releases 🔥",
+    id: "P1YKvwFDCZY",
+    title: "Would YOU take the shot? 😳",
   },
   {
-    id: "xLrM3vLzA3I",
-    title: "One week left!!! Help us spread the word before launch 🔥",
+    id: "QGurU8jFbL4",
+    title: "What should we add to our VR game next? 👀🍌",
   },
 ] as const;
 
